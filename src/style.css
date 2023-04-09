@@ -3,16 +3,61 @@
   margin: 0;
   padding: 0;
 }
+.casas {
+  /* background: linear-gradient(
+    81.86deg,
+    #0d0c4c -24.42%,
+    rgba(10, 9, 57, 0.991329) 39.9%,
+    #0a082b 109.58%
+  ); */
 
+  background: rgb(42, 37, 125);
+  background: radial-gradient(
+    circle,
+    rgba(42, 37, 125, 1) 11%,
+    rgba(10, 10, 83, 1) 45%,
+    rgba(9, 7, 42, 1) 73%
+  );
+
+  height: 100vh;
+}
+.casas > div {
+  background-image: url(./assets/brillo-5.png);
+  background-size: cover;
+  height: 100%;
+}
 .contenedor-casas {
-  width: 40vw;
-  height: 40vh;
+  width: 50vw;
+  height: 70vh;
   display: grid;
-  grid-template-columns: auto auto;
-  background-color: aquamarine;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 80px;
+  margin: auto;
 }
 
-.imagen-casa {
-  width: 100%;
+.casa-hufflepuff {
+  background-image: url(./assets/huffepuff.jpg);
+}
+.casa-gryffindor {
+  background-image: url(./assets/gryffindor.jpg);
+}
+.casa-ravenclaw {
+  background-image: url(./assets/ravenclaw.jpg);
+}
+.casa-slytherin {
+  background-image: url(./assets/slytherin.jpg);
+}
+
+.casa {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.casa__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
+  color: white;
 }
