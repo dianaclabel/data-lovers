@@ -1,8 +1,16 @@
+:root {
+  --fuente-titulo: "Harry Potter", sans-serif;
+  --fuente-primary: "Roboto", sans-serif;
+  --fuente-secondary: "Courgette", cursive;
+  --color-primary: #c78b1c;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 .casas {
   /* background: linear-gradient(
     81.86deg,
@@ -60,4 +68,23 @@
   justify-content: center;
   height: 100%;
   color: white;
+  display: none;
+}
+
+.casa__info-titulo {
+  color: var(--color-primary);
+  font-family: var(--fuente-secondary);
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+}
+
+.casa__info > p {
+  font-size: 18px;
+  font-family: var(--fuente-primary);
+  padding-top: 12px;
+}
+
+div .casa__info-total {
+  font-size: 2.5rem;
+  font-weight: 400;
 }
