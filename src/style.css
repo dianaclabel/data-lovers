@@ -3,3 +3,98 @@
   margin: 0;
   padding: 0;
 }
+
+body{
+  width: 100%;
+}
+
+.hechizos-pociones {
+  width:100%;
+  background-image:  url(assets/fondo-volando-moto.jpg);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;	
+  padding: 10%;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h1, h2{
+  font-family: 'Jim Nightshade', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #C78B1C;
+}
+
+.contenedor-imagenes {
+  display: flex;
+  width: 90%;
+  margin: auto auto;
+}
+
+.contenedor-imagenes div {
+  text-align: center;
+  width: 36%;
+  position: relative;
+  top: -30px;
+}
+
+.contenedor-imagenes div h2 {
+  position: relative;
+  top: 50px;
+}
+
+.contenedor-imagenes div.medio {
+  width: 25%;
+  display: flex;
+   align-items: center;
+}
+
+.contenedor-imagenes div img.libro--pocion {
+  border-radius: 25px;
+  border: 1px solid #C78B1C;
+  width: 90%;
+  height: 80%;
+}
+
+.contenedor-imagenes div img.img--varita {
+  width: 100%;
+  transform: rotate(-30deg);
+}
+
+.contenedor-H-P {
+  width: 65%;
+  height: 60%;
+  background: #0B0939;
+  border: 7px solid #C78B1C;
+  border-radius: 45px;
+  padding: 1%;
+  margin: auto auto;
+  text-align: center;
+}
+
+/*
+}
+.lst-hechizos--pociones{
+  list-style-type:none;
+  display: inline;
+  
+}
+
+.lst-hechizos--pociones li{
+  display:inline;
+}
+
+.lst-hechizos--pociones li img{
+  width: 25%;
+  height: 25%;
+}
+.arreglo{
+  display: inline-flex;
+}
