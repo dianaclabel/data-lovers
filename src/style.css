@@ -95,3 +95,82 @@ div .casa__info-total {
 }
 
 /* Estilos para H.U 2 */
+
+/*gryffindor*/
+
+.body-gryffindor {
+  background-image: url(./assets/fondo-gryffindor2.jpg);
+  background-size: cover;
+}
+.nav-gryffindor {
+  height: 10vh;
+  width: 100%;
+}
+.nav-gryffindor__items {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 2rem;
+  list-style: none;
+}
+
+.nav-item > a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-family: var(--fuente-secondary);
+  font-size: 1.5rem;
+}
+
+.nav-item > a:hover {
+  font-size: 1.7rem;
+  color: #ffffff;
+}
+
+.contenedor-principal-gryffindor {
+  width: 100%;
+}
+
+.intro-gryffindor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo-principal {
+  font-size: 3.5rem;
+  color: #ffffff;
+  font-family: var(--fuente-secondary);
+  margin-bottom: 2rem;
+}
+
+.subtitulo {
+  font-size: 2rem;
+  color: #ffffff;
+  font-family: var(--fuente-primary);
+  margin-bottom: 2rem;
+}
+
+.form-gryffindor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.buscador-gryffindor {
+  width: 30%;
+  height: 35px;
+  border-radius: 12px;
+  outline: none;
+}
+
+.img-buscador {
+  width: 25px;
+  position: absolute;
+  right: 680px;
+}
