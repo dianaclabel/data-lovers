@@ -11,14 +11,8 @@
   padding: 0;
 }
 
+/* Estilos para H.U 1 */
 .casas {
-  /* background: linear-gradient(
-    81.86deg,
-    #0d0c4c -24.42%,
-    rgba(10, 9, 57, 0.991329) 39.9%,
-    #0a082b 109.58%
-  ); */
-
   background: rgb(42, 37, 125);
   background: radial-gradient(
     circle,
@@ -26,14 +20,15 @@
     rgba(10, 10, 83, 1) 45%,
     rgba(9, 7, 42, 1) 73%
   );
-
   height: 100vh;
 }
+
 .casas > div {
   background-image: url(./assets/brillo-5.png);
   background-size: cover;
   height: 100%;
 }
+
 .contenedor-casas {
   width: 50vw;
   height: 70vh;
@@ -72,7 +67,7 @@
   justify-content: center;
   height: 100%;
   color: white;
-  /* display: none; */
+  display: none;
 }
 
 .casa__info-titulo {
@@ -93,6 +88,10 @@ div .casa__info-total {
   font-weight: 400;
 }
 
-/* .casa:hover .casa__link > .casa__info {
+.casa:hover .casa__link > .casa__info {
   display: flex;
-} */
+  background-color: black;
+  opacity: 0.8;
+}
+
+/* Estilos para H.U 2 */
