@@ -3,6 +3,7 @@
   --fuente-primary: "Roboto", sans-serif;
   --fuente-secondary: "Courgette", cursive;
   --color-primary: #c78b1c;
+  --color-cards-gryffindor: #7f0909;
 }
 
 * {
@@ -173,4 +174,36 @@ div .casa__info-total {
   width: 25px;
   position: absolute;
   right: 680px;
+}
+
+.card-estudiante {
+  width: 450px;
+  padding: 10px;
+  background-color: var(--color-cards-gryffindor);
+  border: var(--color-primary) solid 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-estudiante__img {
+  width: 200px;
+}
+.card-estudiante__info {
+  margin: 0 0 0 10px;
+}
+
+.card-estudiante__info--birthdate,
+.card-estudiante__info--specie,
+.card-estudiante__info--group,
+.card-estudiante__info--death {
+  display: flex;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-family: var(--fuente-primary);
+}
+
+.info-negrita {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 5px;
 }
