@@ -34,7 +34,7 @@
   width: 50vw;
   height: 70vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   padding-top: 80px;
   margin: auto;
 }
@@ -53,8 +53,10 @@
 }
 
 .casa {
+  height: 230px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .casa__link {
@@ -93,6 +95,12 @@ div .casa__info-total {
   display: flex;
   background-color: black;
   opacity: 0.8;
+}
+
+@media (min-width: 1440px) {
+  .casa {
+    height: 340px;
+  }
 }
 
 /* Estilos para H.U 2 */
@@ -176,20 +184,42 @@ div .casa__info-total {
   right: 680px;
 }
 
+.cards-estudiante {
+  margin: 100px 30px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+}
 .card-estudiante {
-  width: 450px;
+  width: 480px;
+  height: 300px;
   padding: 10px;
   background-color: var(--color-cards-gryffindor);
   border: var(--color-primary) solid 4px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  border-radius: 15px;
+}
+.card-estudiante__info--titulo {
+  font-family: var(--fuente-secondary);
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin: 15px 0 25px 0;
+  text-align: center;
+}
+
+.contenedor-img {
+  background-color: #3a0404;
+  margin: 12px;
+  border-radius: 15px;
 }
 .card-estudiante__img {
   width: 200px;
 }
 .card-estudiante__info {
-  margin: 0 0 0 10px;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .card-estudiante__info--birthdate,
