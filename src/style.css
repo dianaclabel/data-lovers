@@ -6,6 +6,7 @@
 
 body{
   width: 100%;
+
 }
 
 .hechizos-pociones {
@@ -43,6 +44,7 @@ h1, h2{
   width: 36%;
   position: relative;
   top: -30px;
+  cursor: pointer;
 }
 
 .contenedor-imagenes div h2 {
@@ -53,7 +55,8 @@ h1, h2{
 .contenedor-imagenes div.medio {
   width: 25%;
   display: flex;
-   align-items: center;
+  align-items: center;
+  cursor: default;
 }
 
 .contenedor-imagenes div img.libro--pocion {
@@ -79,22 +82,38 @@ h1, h2{
   text-align: center;
 }
 
-/*
+.section-spell{
+  height: 100vh;
+  background-image: url(assets/fondo-azul-mandala.jpg);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;	
+
 }
-.lst-hechizos--pociones{
-  list-style-type:none;
-  display: inline;
+.nav-hechizos{
+
+  
+  
+ 
+}
+.nav-hechizos--items{
+  list-style: none;
+  float: right;
+ }
+ .nav-item{
+  display: inline-block;
   
 }
+#titulo-hechizo{
+  text-align: center;
+}
+#titulo2-hechizo{
+  color: azure;
+  text-align: center;
+}
+.barra-de-busqueda{
+  text-align: center;
+ 
 
-.lst-hechizos--pociones li{
-  display:inline;
-}
 
-.lst-hechizos--pociones li img{
-  width: 25%;
-  height: 25%;
-}
-.arreglo{
-  display: inline-flex;
-}
+  }
