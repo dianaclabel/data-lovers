@@ -1,0 +1,13 @@
+:root {
+  --fuente-titulo: "Harry Potter", sans-serif;
+  --fuente-primary: "Roboto", sans-serif;
+  --fuente-secondary: "Courgette", cursive;
+  --color-primary: #c78b1c;
+  --color-cards-gryffindor: #7f0909;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

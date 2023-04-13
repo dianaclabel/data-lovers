@@ -1,0 +1,138 @@
+/* Estilos para H.U 2 */
+
+/*gryffindor*/
+.body-house {
+  background-size: cover;
+}
+
+.body-gryffindor {
+  background-image: url(/assets/fondo-gryffindor2.jpg);
+}
+.nav-house {
+  height: 10vh;
+  width: 100%;
+}
+.nav-house__items {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 2rem;
+  list-style: none;
+}
+
+.nav-item > a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-family: var(--fuente-secondary);
+  font-size: 1.5rem;
+}
+
+.nav-item > a:hover {
+  font-size: 1.7rem;
+  color: #ffffff;
+}
+
+.contenedor-principal-gryffindor {
+  width: 100%;
+}
+
+.intro-gryffindor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo-principal {
+  font-size: 3.5rem;
+  color: #ffffff;
+  font-family: var(--fuente-secondary);
+  margin-bottom: 2rem;
+}
+
+.subtitulo {
+  font-size: 2rem;
+  color: #ffffff;
+  font-family: var(--fuente-primary);
+  margin-bottom: 2rem;
+}
+
+.form-gryffindor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.buscador-gryffindor {
+  width: 30%;
+  height: 35px;
+  border-radius: 12px;
+  outline: none;
+  padding: 10px;
+}
+
+.img-buscador {
+  width: 25px;
+  position: absolute;
+  right: 680px;
+}
+
+.cards-estudiante {
+  margin: 100px 30px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 500px);
+  row-gap: 35px;
+  justify-content: center;
+  justify-items: center;
+}
+.card-estudiante {
+  width: 480px;
+  height: 300px;
+  padding: 10px;
+  background-color: var(--color-cards-gryffindor);
+  border: var(--color-primary) solid 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+}
+.card-estudiante__info--titulo {
+  font-family: var(--fuente-secondary);
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin: 15px 0 25px 0;
+  text-align: center;
+}
+
+.contenedor-img {
+  background-color: #3a0404;
+  margin: 12px;
+  border-radius: 15px;
+}
+.card-estudiante__img {
+  width: 200px;
+}
+.card-estudiante__info {
+  margin: 0 auto;
+  height: 100%;
+}
+
+.card-estudiante__info--birthdate,
+.card-estudiante__info--specie,
+.card-estudiante__info--group,
+.card-estudiante__info--death {
+  display: flex;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-family: var(--fuente-primary);
+}
+
+.info-negrita {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 5px;
+}
