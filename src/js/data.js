@@ -29,4 +29,4 @@ export const computeStats = function (data) {
 
 //Filtrar los personajes segun la letra del buscador
 
-export const filterData = function (data, condition) {};
+// export const filterData = function (data, condition) {};
