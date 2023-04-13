@@ -1,121 +1,18 @@
-:root {
-  --fuente-titulo: "Harry Potter", sans-serif;
-  --fuente-primary: "Roboto", sans-serif;
-  --fuente-secondary: "Courgette", cursive;
-  --color-primary: #c78b1c;
-  --color-cards-gryffindor: #7f0909;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* Estilos para H.U 1 */
-.casas {
-  background: rgb(42, 37, 125);
-  background: radial-gradient(
-    circle,
-    rgba(42, 37, 125, 1) 11%,
-    rgba(10, 10, 83, 1) 45%,
-    rgba(9, 7, 42, 1) 73%
-  );
-  height: 100vh;
-}
-
-.casas > div {
-  background-image: url(./assets/brillo-5.png);
-  background-size: cover;
-  height: 100%;
-}
-
-.contenedor-casas {
-  width: 50vw;
-  height: 70vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding-top: 80px;
-  margin: auto;
-}
-
-.casa-hufflepuff {
-  background-image: url(./assets/huffepuff.jpg);
-}
-.casa-gryffindor {
-  background-image: url(./assets/gryffindor.jpg);
-}
-.casa-ravenclaw {
-  background-image: url(./assets/ravenclaw.jpg);
-}
-.casa-slytherin {
-  background-image: url(./assets/slytherin.jpg);
-}
-
-.casa {
-  height: 230px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.casa__link {
-  text-decoration: none;
-}
-
-.casa__info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: white;
-  display: none;
-}
-
-.casa__info-titulo {
-  color: var(--color-primary);
-  font-family: var(--fuente-secondary);
-  letter-spacing: 2px;
-  font-size: 2.5rem;
-}
-
-.casa__info > p {
-  font-size: 18px;
-  font-family: var(--fuente-primary);
-  padding-top: 12px;
-}
-
-div .casa__info-total {
-  font-size: 2.5rem;
-  font-weight: 400;
-}
-
-.casa:hover .casa__link > .casa__info {
-  display: flex;
-  background-color: black;
-  opacity: 0.8;
-}
-
-@media (min-width: 1440px) {
-  .casa {
-    height: 340px;
-  }
-}
-
 /* Estilos para H.U 2 */
 
 /*gryffindor*/
-
-.body-gryffindor {
-  background-image: url(./assets/fondo-gryffindor2.jpg);
+.body-house {
   background-size: cover;
 }
-.nav-gryffindor {
+
+.body-gryffindor {
+  background-image: url(/assets/fondo-gryffindor2.jpg);
+}
+.nav-house {
   height: 10vh;
   width: 100%;
 }
-.nav-gryffindor__items {
+.nav-house__items {
   height: 100%;
   display: flex;
   justify-content: end;
@@ -176,6 +73,7 @@ div .casa__info-total {
   height: 35px;
   border-radius: 12px;
   outline: none;
+  padding: 10px;
 }
 
 .img-buscador {
@@ -187,9 +85,10 @@ div .casa__info-total {
 .cards-estudiante {
   margin: 100px 30px 50px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 10px;
-  row-gap: 10px;
+  grid-template-columns: repeat(3, 500px);
+  row-gap: 35px;
+  justify-content: center;
+  justify-items: center;
 }
 .card-estudiante {
   width: 480px;

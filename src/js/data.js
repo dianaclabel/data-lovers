@@ -1,15 +1,8 @@
 // estas funciones son de ejemplo
-export const example = () => {
-  return "example";
-};
-
-export const anotherExample = () => {
-  return "OMG";
-};
 
 //total de personajes
-export let computeStats = function (data) {
-  let totalEstudiantes = {
+export const computeStats = function (data) {
+  const totalEstudiantes = {
     hufflepuff: 0,
     gryffindor: 0,
     ravenclaw: 0,
@@ -33,3 +26,7 @@ export let computeStats = function (data) {
 
   return totalEstudiantes;
 };
+
+//Filtrar los personajes segun la letra del buscador
+
+export const filterData = function (data, condition) {};
