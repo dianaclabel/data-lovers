@@ -2,12 +2,12 @@
 import { filterSpells } from "./data.js";
 const divHechizos = document.querySelector("#div-hechizos");
 const inputBuscador = document.querySelector("#input-buscador");
-
+/*
 if(divHechizos!==null){
     divHechizos.addEventListener("click",()=>{ 
         document.location = "spell.html";
     });
-}
+}*/
 
 if(inputBuscador!==null){
     inputBuscador.addEventListener("keydown", (e) => {
