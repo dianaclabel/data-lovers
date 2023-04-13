@@ -15,15 +15,21 @@ body{
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;	
-  padding: 10%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 }
 
 h1 {
   font-size: 45px;
+  margin-bottom: 25px;
 }
 
 h2 {
   font-size: 35px;
+  
 }
 
 h1, h2{
@@ -35,85 +41,58 @@ h1, h2{
 
 .contenedor-imagenes {
   display: flex;
-  width: 90%;
-  margin: auto auto;
-}
-
-.contenedor-imagenes div {
-  text-align: center;
-  width: 36%;
-  position: relative;
-  top: -30px;
-  cursor: pointer;
-}
-
-.contenedor-imagenes div h2 {
-  position: relative;
-  top: 50px;
+  width: 80%;
+  justify-content: center;
 }
 
 .contenedor-imagenes div.medio {
-  width: 25%;
+  width: 50%;
   display: flex;
   align-items: center;
   cursor: default;
 }
-
-.contenedor-imagenes div img.libro--pocion {
-  border-radius: 25px;
-  border: 1px solid #C78B1C;
-  width: 90%;
-  height: 80%;
-}
-
 .contenedor-imagenes div img.img--varita {
   width: 100%;
   transform: rotate(-30deg);
 }
+.contenedor-hechizos{
+  display: block;
+  width: 60%;
+  background-image: url(assets/spell-foto-libro.jpg);
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  border: 1px solid #C78B1C;
+  height: 300px;
+  background-size: cover;
 
+}
 .contenedor-H-P {
-  width: 65%;
-  height: 60%;
+  width: 60%;
+  min-height: 70%;
   background: #0B0939;
   border: 7px solid #C78B1C;
   border-radius: 45px;
-  padding: 1%;
+  padding: 0px 35px 35px 35px;
   margin: auto auto;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
 }
 
-.section-spell{
-  height: 100vh;
-  background-image: url(assets/fondo-azul-mandala.jpg);
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;	
-
-}
-.nav-hechizos{
-
-  
-  
- 
-}
-.nav-hechizos--items{
-  list-style: none;
-  float: right;
- }
- .nav-item{
-  display: inline-block;
-  
-}
-#titulo-hechizo{
-  text-align: center;
-}
-#titulo2-hechizo{
-  color: azure;
-  text-align: center;
-}
-.barra-de-busqueda{
-  text-align: center;
- 
+.contenedor-pociones {
+  display: block;
+  width: 60%;
+  background-image: url(./assets/potion-foto-frasco.jpg);
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  border: 1px solid #C78B1C;
+  height: 300px;
+  background-size: cover;
 
 
-  }
+}
+
+
+
