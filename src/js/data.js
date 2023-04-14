@@ -1,14 +1,5 @@
-// estas funciones son de ejemplo
-// import data from "./data/harrypotter/data.js";
+import data from "../data/harrypotter/data.js";
 
-// export const example = () => {
-//   return 'example';
-// };
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
-//total de personajes
 export const computeStats = function (data) {
   const totalEstudiantes = {
     hufflepuff: 0,
@@ -43,3 +34,7 @@ export const computeStats = function (data) {
 export const filterSpells = (spellName) => {
   return data.spells.filter((spell) => spell.name.includes(spellName));
 };
+
+export const filterPotions = (potionsName) => {
+  return data.potions.filter((potions) => potions.name.includes(potionsName));
+ };
