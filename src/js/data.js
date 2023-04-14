@@ -1,14 +1,5 @@
-// estas funciones son de ejemplo
-// import data from "./data/harrypotter/data.js";
+import data from "../data/harrypotter/data.js";
 
-// export const example = () => {
-//   return 'example';
-// };
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
-//total de personajes
 export const computeStats = function (data) {
   const totalEstudiantes = {
     hufflepuff: 0,

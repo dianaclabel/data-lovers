@@ -1,4 +1,4 @@
-import { filterSpells } from "./data.js";
+import { filterSpells } from "../data.js";
 const divHechizos = document.querySelector("#div-hechizos");
 const inputBuscador = document.querySelector("#input-buscador");
 /*

@@ -11,7 +11,7 @@
   
   .hechizos-pociones {
     width:100%;
-    background-image:  url(../../assets/fondo-volando-moto.jpg);
+    background-image:  url(assets/fondo-volando-moto.jpg);
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;	
@@ -58,7 +58,7 @@
   .contenedor-hechizos{
     display: block;
     width: 60%;
-    background-image: url(../../assets/spell-foto-libro.jpg);
+    background-image: url(assets/spell-foto-libro.jpg);
     background-repeat: no-repeat;
     border-radius: 25px;
     border: 1px solid #C78B1C;
@@ -85,7 +85,7 @@
   .contenedor-pociones {
     display: block;
     width: 60%;
-    background-image: url(../../assets/potion-foto-frasco.jpg);
+    background-image: url(./assets/potion-foto-frasco.jpg);
     background-repeat: no-repeat;
     border-radius: 25px;
     border: 1px solid #C78B1C;
