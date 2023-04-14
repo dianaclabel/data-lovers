@@ -1,9 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
   body{
     width: 100%;
   
@@ -22,17 +16,17 @@
    
   }
   
-  h1 {
+  .titulo-spell-potions {
     font-size: 45px;
     margin-bottom: 25px;
   }
   
-  h2 {
+  .titulo-spell, .titulo-potions {
     font-size: 35px;
     
   }
   
-  h1, h2{
+  .titulo-spell, .titulo-potions , .titulo-spell-potions{
     font-family: 'Jim Nightshade', sans-serif;
     font-style: italic;
     font-weight: 400;

@@ -34,3 +34,7 @@ export const computeStats = function (data) {
 export const filterSpells = (spellName) => {
   return data.spells.filter((spell) => spell.name.includes(spellName));
 };
+
+export const filterPotions = (potionsName) => {
+  return data.potions.filter((potions) => potions.name.includes(potionsName));
+ };
