@@ -1,9 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
   body{
     width: 100%;
   
@@ -11,7 +5,7 @@
   
   .hechizos-pociones {
     width:100%;
-    background-image:  url(assets/fondo-volando-moto.jpg);
+    background-image:  url(../../assets/fondo-volando-moto.jpg);
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;	
@@ -22,17 +16,17 @@
    
   }
   
-  h1 {
+  .titulo-spell-potions {
     font-size: 45px;
     margin-bottom: 25px;
   }
   
-  h2 {
+  .titulo-spell, .titulo-potions {
     font-size: 35px;
     
   }
   
-  h1, h2{
+  .titulo-spell, .titulo-potions , .titulo-spell-potions{
     font-family: 'Jim Nightshade', sans-serif;
     font-style: italic;
     font-weight: 400;
@@ -58,7 +52,7 @@
   .contenedor-hechizos{
     display: block;
     width: 60%;
-    background-image: url(assets/spell-foto-libro.jpg);
+    background-image: url(../../assets/spell-foto-libro.jpg);
     background-repeat: no-repeat;
     border-radius: 25px;
     border: 1px solid #C78B1C;
@@ -85,7 +79,7 @@
   .contenedor-pociones {
     display: block;
     width: 60%;
-    background-image: url(./assets/potion-foto-frasco.jpg);
+    background-image: url(../../assets/potion-foto-frasco.jpg);
     background-repeat: no-repeat;
     border-radius: 25px;
     border: 1px solid #C78B1C;
