@@ -36,12 +36,9 @@ export const filterData = function (data, houseSelection) {
   return estudiantesHouseSelection;
 };
 
+//convertir los name de mi object en minuscula
 export const dataNameToLowerCase = function (data) {
-  const nombreEstudiantesMinuscula = data.map((element) => {
-    return element.name.toLowerCase();
-  });
-  console.log(nombreEstudiantesMinuscula);
-  return nombreEstudiantesMinuscula;
+  return data.name.toLowerCase();
 };
 
 //hechizos

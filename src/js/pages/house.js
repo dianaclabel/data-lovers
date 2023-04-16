@@ -9,33 +9,21 @@ const houseSelectionInput = document.getElementById("house").value;
 const buscadorInput = document.querySelector("#buscador-house");
 
 function buscarPersonajes(data) {
-  buscadorInput.addEventListener("keyup", (e) => {
+  buscadorInput.addEventListener("keyup", () => {
     const valorBuscador = buscadorInput.value;
     //Todos los personajes por casa
     const estudiantesHouseSelection = filterData(data, houseSelectionInput);
-    // Todos los nombre de los personajes en minuscula
-    const nombreEstudiantesMinuscula = dataNameToLowerCase(
-      estudiantesHouseSelection
-    );
 
-    const estudiantesBuscados = nombreEstudiantesMinuscula.filter(
+    const estudiantesBuscados = estudiantesHouseSelection.filter(
       (estudianteHouseSelection) => {
-        if (estudianteHouseSelection.includes(valorBuscador)) {
+        const nameEstudianteMinuscula = dataNameToLowerCase(
+          estudianteHouseSelection
+        );
+        if (nameEstudianteMinuscula.includes(valorBuscador)) {
           return estudianteHouseSelection;
         }
       }
     );
-
-    for (let i = 0; i < estudiantesBuscados.length; i++) {
-      for (const estudianteHouseSelection of estudiantesHouseSelection) {
-        const estudianteHouseSelectionObject = estudianteHouseSelection;
-        if (
-          estudiantesBuscados[i] === estudianteHouseSelection.name.toLowerCase()
-        ) {
-          console.log(estudianteHouseSelectionObject);
-        }
-      }
-    }
 
     console.log(valorBuscador);
     console.log(estudiantesBuscados);
