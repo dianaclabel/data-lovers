@@ -18,21 +18,24 @@ function buscarPersonajes(data) {
       estudiantesHouseSelection
     );
 
-    // const estudiantesBuscados = nombreEstudiantesMinuscula.filter(
-    //   (estudianteHouseSelection) => {
-    //     if (estudianteHouseSelection.includes(valorBuscador)) {
-    //       return estudiantesHouseSelection;
-    //     }
-    //   }
-    // );
-
     const estudiantesBuscados = nombreEstudiantesMinuscula.filter(
       (estudianteHouseSelection) => {
         if (estudianteHouseSelection.includes(valorBuscador)) {
-          return estudiantesHouseSelection.id;
+          return estudianteHouseSelection;
         }
       }
     );
+
+    for (let i = 0; i < estudiantesBuscados.length; i++) {
+      for (const estudianteHouseSelection of estudiantesHouseSelection) {
+        const estudianteHouseSelectionObject = estudianteHouseSelection;
+        if (
+          estudiantesBuscados[i] === estudianteHouseSelection.name.toLowerCase()
+        ) {
+          console.log(estudianteHouseSelectionObject);
+        }
+      }
+    }
 
     console.log(valorBuscador);
     console.log(estudiantesBuscados);
