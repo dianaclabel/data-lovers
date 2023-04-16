@@ -28,7 +28,21 @@ export const computeStats = function (data) {
 
 //Filtrar los personajes segun la letra del buscador
 
-// export const filterData = function (data, condition) {};
+export const filterData = function (data, houseSelection) {
+  const estudiantesHouseSelection = data.characters.filter(
+    (character) => character.house === houseSelection
+  );
+  console.log(estudiantesHouseSelection);
+  return estudiantesHouseSelection;
+};
+
+export const dataNameToLowerCase = function (data) {
+  const nombreEstudiantesMinuscula = data.map((element) => {
+    return element.name.toLowerCase();
+  });
+  console.log(nombreEstudiantesMinuscula);
+  return nombreEstudiantesMinuscula;
+};
 
 //hechizos
 export const filterSpells = (spellName) => {
@@ -37,4 +51,4 @@ export const filterSpells = (spellName) => {
 
 export const filterPotions = (potionsName) => {
   return data.potions.filter((potions) => potions.name.includes(potionsName));
- };
+};

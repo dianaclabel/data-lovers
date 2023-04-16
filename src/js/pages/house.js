@@ -1,18 +1,44 @@
-// import { filterData } from "../data.js";
+import { filterData } from "../data.js";
+import { dataNameToLowerCase } from "../data.js";
 
-// import data from "../../data/harrypotter/data.js";
+import data from "../../data/harrypotter/data.js";
 
 //buscar a los personajes por cada letra que esta en el buscador
 
-const houseHiddenInput = document.getElementById("house").value;
+const houseSelectionInput = document.getElementById("house").value;
 const buscadorInput = document.querySelector("#buscador-house");
 
-function buscarPersonajes() {
+function buscarPersonajes(data) {
   buscadorInput.addEventListener("keyup", (e) => {
     const valorBuscador = buscadorInput.value;
+    //Todos los personajes por casa
+    const estudiantesHouseSelection = filterData(data, houseSelectionInput);
+    // Todos los nombre de los personajes en minuscula
+    const nombreEstudiantesMinuscula = dataNameToLowerCase(
+      estudiantesHouseSelection
+    );
+
+    // const estudiantesBuscados = nombreEstudiantesMinuscula.filter(
+    //   (estudianteHouseSelection) => {
+    //     if (estudianteHouseSelection.includes(valorBuscador)) {
+    //       return estudiantesHouseSelection;
+    //     }
+    //   }
+    // );
+
+    const estudiantesBuscados = nombreEstudiantesMinuscula.filter(
+      (estudianteHouseSelection) => {
+        if (estudianteHouseSelection.includes(valorBuscador)) {
+          return estudiantesHouseSelection.id;
+        }
+      }
+    );
+
     console.log(valorBuscador);
+    console.log(estudiantesBuscados);
   });
 }
+buscarPersonajes(data);
 
 function creacionCard() {
   const cardEstudiantesDiv = document.createElement("div");
