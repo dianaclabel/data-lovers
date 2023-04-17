@@ -7,6 +7,9 @@ import data from "../../data/harrypotter/data.js";
 
 const houseSelectionInput = document.getElementById("house").value;
 const buscadorInput = document.querySelector("#buscador-house");
+const contenedorCardsEstudiantesDiv = document.getElementById(
+  "contenedor-cards-estudiantes"
+);
 
 function buscarPersonajes(data) {
   buscadorInput.addEventListener("keyup", () => {
@@ -20,6 +23,9 @@ function buscarPersonajes(data) {
           estudianteHouseSelection
         );
         if (nameEstudianteMinuscula.includes(valorBuscador)) {
+          contenedorCardsEstudiantesDiv.appendChild(
+            creacionCard(estudianteHouseSelection)
+          );
           return estudianteHouseSelection;
         }
       }
@@ -29,9 +35,10 @@ function buscarPersonajes(data) {
     console.log(estudiantesBuscados);
   });
 }
-buscarPersonajes(data);
 
-function creacionCard() {
+function creacionCard(data) {
+  const personajeEncontrado = data;
+
   const cardEstudiantesDiv = document.createElement("div");
   cardEstudiantesDiv.classList.add("card-estudiante");
 
@@ -40,12 +47,17 @@ function creacionCard() {
 
   const imagenCasaImg = document.createElement("img");
   imagenCasaImg.classList.add("card-estudiante__img");
+  imagenCasaImg.setAttribute(
+    "src",
+    "../../assets/escudo-" + `${houseSelectionInput}` + ".png"
+  );
 
   const contenedorCardInfoDiv = document.createElement("div");
   contenedorCardInfoDiv.classList.add("card-estudiante__info");
 
   const cardInfoTituloH3 = document.createElement("h3");
   cardInfoTituloH3.classList.add("card-estudiante__info--titulo");
+  cardInfoTituloH3.innerText = personajeEncontrado.name;
 
   contenedorImgDiv.appendChild(imagenCasaImg);
   contenedorCardInfoDiv.appendChild(cardInfoTituloH3);
@@ -53,14 +65,21 @@ function creacionCard() {
   const propiedadInfo = [
     "Birthdate:",
     "Specie:",
-    "Death:",
+    "Gender:",
     "Group Association:",
+  ];
+
+  const valorInfo = [
+    personajeEncontrado.birth,
+    personajeEncontrado.species,
+    personajeEncontrado.gender,
+    personajeEncontrado.associated_groups[0],
   ];
 
   const nombreClasePadre = [
     "card-estudiante__info--birthdate",
     "card-estudiante__info--specie",
-    "card-estudiante__info--death",
+    "card-estudiante__info--gender",
     "card-estudiante__info--group",
   ];
 
@@ -73,7 +92,7 @@ function creacionCard() {
     elementNegritaP.innerText = propiedadInfo[i];
 
     const elementP = document.createElement("P");
-    elementP.innerText = "valor" + propiedadInfo[i];
+    elementP.innerText = valorInfo[i];
 
     contenedorPropiedadDiv.appendChild(elementNegritaP);
     contenedorPropiedadDiv.appendChild(elementP);
@@ -84,7 +103,7 @@ function creacionCard() {
   cardEstudiantesDiv.appendChild(contenedorCardInfoDiv);
 
   console.log(cardEstudiantesDiv);
+  return cardEstudiantesDiv;
 }
 
-creacionCard();
-// buscarPersonajes(data);
+buscarPersonajes(data);

@@ -85,20 +85,20 @@
 .cards-estudiante {
   margin: 100px 30px 50px;
   display: grid;
-  grid-template-columns: repeat(3, 500px);
+  grid-template-columns: repeat(3, 550px);
   row-gap: 35px;
+  column-gap: 35px;
   justify-content: center;
-  justify-items: center;
 }
 .card-estudiante {
-  width: 480px;
-  height: 300px;
+  width: 550px;
+  min-height: 300px;
   padding: 10px;
   background-color: var(--color-cards-gryffindor);
   border: var(--color-primary) solid 4px;
   display: flex;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 .card-estudiante__info--titulo {
   font-family: var(--fuente-secondary);
@@ -124,7 +124,7 @@
 .card-estudiante__info--birthdate,
 .card-estudiante__info--specie,
 .card-estudiante__info--group,
-.card-estudiante__info--death {
+.card-estudiante__info--gender {
   display: flex;
   margin-bottom: 15px;
   color: #ffffff;
