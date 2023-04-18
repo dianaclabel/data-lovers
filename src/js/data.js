@@ -41,10 +41,16 @@ export const dataNameToLowerCase = function (data) {
   return data.name.toLowerCase();
 };
 
-//filtrar a los personajes masculinos
+//filtrar a los personajes por genero
 export const filterGender = function (data, valorSeleccion) {
   return data.filter((personaje) => {
     return personaje.gender === valorSeleccion;
+  });
+};
+//filtrar a los personajes por tipo(muggle, pure blood)
+export const filterTypeAncestry = function (data, valorSeleccion) {
+  return data.filter((personaje) => {
+    return personaje.ancestry === valorSeleccion;
   });
 };
 

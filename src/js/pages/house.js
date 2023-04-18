@@ -1,4 +1,4 @@
-import { filterData } from "../data.js";
+import { filterData, filterTypeAncestry } from "../data.js";
 import { dataNameToLowerCase } from "../data.js";
 import { filterGender } from "../data.js";
 
@@ -54,6 +54,20 @@ seleccionFiltracionSelect.addEventListener("change", () => {
     for (const personajeFiltradosGenero of personajesFiltradosGenero) {
       contenedorCardsEstudiantesDiv.appendChild(
         creacionCard(personajeFiltradosGenero)
+      );
+    }
+  } else if (
+    valorSeleccion === "Muggle" ||
+    valorSeleccion === "Pure-blood" ||
+    valorSeleccion === "Half-blood"
+  ) {
+    const personajesFiltradosTipo = filterTypeAncestry(
+      estudiantesHouseSelection,
+      valorSeleccion
+    );
+    for (const personajeFiltradoGenero of personajesFiltradosTipo) {
+      contenedorCardsEstudiantesDiv.appendChild(
+        creacionCard(personajeFiltradoGenero)
       );
     }
   }
