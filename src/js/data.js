@@ -29,11 +29,11 @@ export const computeStats = function (data) {
 //Filtrar los personajes segun la letra del buscador
 
 export const filterData = function (data, houseSelection) {
-  const estudiantesHouseSelection = data.characters.filter(
+  const personajesHouseSelection = data.characters.filter(
     (character) => character.house === houseSelection
   );
-  console.log(estudiantesHouseSelection);
-  return estudiantesHouseSelection;
+  console.log(personajesHouseSelection);
+  return personajesHouseSelection;
 };
 
 //convertir los name de mi object en minuscula

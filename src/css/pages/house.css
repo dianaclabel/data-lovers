@@ -82,7 +82,7 @@
   right: 680px;
 }
 
-.cards-estudiante {
+.cards-personajes {
   margin: 100px 30px 50px;
   display: grid;
   grid-template-columns: repeat(3, 550px);
@@ -90,7 +90,7 @@
   column-gap: 35px;
   justify-content: center;
 }
-.card-estudiante {
+.card-personaje {
   width: 550px;
   min-height: 300px;
   padding: 10px;
@@ -100,7 +100,7 @@
   align-items: center;
   border-radius: 25px;
 }
-.card-estudiante__info--titulo {
+.card-personaje__info--titulo {
   font-family: var(--fuente-secondary);
   font-size: 2rem;
   color: var(--color-primary);
@@ -113,18 +113,18 @@
   margin: 12px;
   border-radius: 15px;
 }
-.card-estudiante__img {
+.card-personaje__img {
   width: 200px;
 }
-.card-estudiante__info {
+.card-personaje__info {
   margin: 0 auto;
   height: 100%;
 }
 
-.card-estudiante__info--birthdate,
-.card-estudiante__info--specie,
-.card-estudiante__info--group,
-.card-estudiante__info--gender {
+.card-personaje__info--birthdate,
+.card-personaje__info--specie,
+.card-personaje__info--group,
+.card-personaje__info--gender {
   display: flex;
   margin-bottom: 15px;
   color: #ffffff;
