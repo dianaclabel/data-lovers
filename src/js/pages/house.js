@@ -1,46 +1,69 @@
 import { filterData } from "../data.js";
 import { dataNameToLowerCase } from "../data.js";
+import { filterGender } from "../data.js";
 
 import data from "../../data/harrypotter/data.js";
 
 //buscar a los personajes por cada letra que esta en el buscador
 
-const houseSelectionInput = document.getElementById("house").value;
+const houseSelection = document.getElementById("house").value;
+const seleccionFiltracionSelect = document.getElementById(
+  "seleccion-filtracion"
+);
 const buscadorInput = document.querySelector("#buscador-house");
 const contenedorCardsEstudiantesDiv = document.getElementById(
   "contenedor-cards-estudiantes"
 );
+//Todos los personajes por casa
+const estudiantesHouseSelection = filterData(data, houseSelection);
 
-function buscarPersonajes(data) {
+function buscarPersonajes() {
   buscadorInput.addEventListener("keyup", () => {
-    const valorBuscador = buscadorInput.value;
-    //Todos los personajes por casa
-    const estudiantesHouseSelection = filterData(data, houseSelectionInput);
+    contenedorCardsEstudiantesDiv.innerHTML = "";
+    const valorBuscador = buscadorInput.value.toLowerCase();
 
-    const estudiantesBuscados = estudiantesHouseSelection.filter(
+    const estudiantesEncontrados = estudiantesHouseSelection.filter(
       (estudianteHouseSelection) => {
         const nameEstudianteMinuscula = dataNameToLowerCase(
           estudianteHouseSelection
         );
-        if (nameEstudianteMinuscula.includes(valorBuscador)) {
-          contenedorCardsEstudiantesDiv.appendChild(
-            creacionCard(estudianteHouseSelection)
-          );
-          return estudianteHouseSelection;
-        }
+        return nameEstudianteMinuscula.includes(valorBuscador);
       }
     );
 
+    for (const estudianteEncontrado of estudiantesEncontrados) {
+      contenedorCardsEstudiantesDiv.appendChild(
+        creacionCard(estudianteEncontrado)
+      );
+    }
+
     console.log(valorBuscador);
-    console.log(estudiantesBuscados);
+    console.log(estudiantesEncontrados);
   });
 }
+
+seleccionFiltracionSelect.addEventListener("change", () => {
+  contenedorCardsEstudiantesDiv.innerHTML = "";
+  const valorSeleccion = seleccionFiltracionSelect.value;
+
+  if (valorSeleccion === "Male" || valorSeleccion === "Female") {
+    const personajesFiltradosGenero = filterGender(
+      estudiantesHouseSelection,
+      valorSeleccion
+    );
+    for (const personajeFiltradosGenero of personajesFiltradosGenero) {
+      contenedorCardsEstudiantesDiv.appendChild(
+        creacionCard(personajeFiltradosGenero)
+      );
+    }
+  }
+});
 
 function creacionCard(data) {
   const personajeEncontrado = data;
 
-  const cardEstudiantesDiv = document.createElement("div");
-  cardEstudiantesDiv.classList.add("card-estudiante");
+  const cardEstudianteDiv = document.createElement("div");
+  cardEstudianteDiv.classList.add("card-estudiante");
 
   const contenedorImgDiv = document.createElement("div");
   contenedorImgDiv.classList.add("contenedor-img");
@@ -49,7 +72,7 @@ function creacionCard(data) {
   imagenCasaImg.classList.add("card-estudiante__img");
   imagenCasaImg.setAttribute(
     "src",
-    "../../assets/escudo-" + `${houseSelectionInput}` + ".png"
+    "../../assets/escudo-" + `${houseSelection}` + ".png"
   );
 
   const contenedorCardInfoDiv = document.createElement("div");
@@ -99,11 +122,11 @@ function creacionCard(data) {
     contenedorCardInfoDiv.appendChild(contenedorPropiedadDiv);
   }
 
-  cardEstudiantesDiv.appendChild(contenedorImgDiv);
-  cardEstudiantesDiv.appendChild(contenedorCardInfoDiv);
+  cardEstudianteDiv.appendChild(contenedorImgDiv);
+  cardEstudianteDiv.appendChild(contenedorCardInfoDiv);
 
-  console.log(cardEstudiantesDiv);
-  return cardEstudiantesDiv;
+  console.log(cardEstudianteDiv);
+  return cardEstudianteDiv;
 }
 
 buscarPersonajes(data);

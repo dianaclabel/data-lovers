@@ -41,6 +41,13 @@ export const dataNameToLowerCase = function (data) {
   return data.name.toLowerCase();
 };
 
+//filtrar a los personajes masculinos
+export const filterGender = function (data, valorSeleccion) {
+  return data.filter((personaje) => {
+    return personaje.gender === valorSeleccion;
+  });
+};
+
 //hechizos
 export const filterSpells = (spellName) => {
   return data.spells.filter((spell) => spell.name.includes(spellName));

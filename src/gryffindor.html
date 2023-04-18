@@ -15,167 +15,40 @@
 <body class="body-house body-gryffindor">
         <nav class="nav-house">
             <ul class="nav-house__items">
-               <li class="nav-item"><a href="/">Home</a></li>
+               <li class="nav-item"><a href="/">Home</i></a></li>
                <li class="nav-item"><a href="/">Books</a></li>
                <li class="nav-item"><a href="/">Spells</a></li>
                <li class="nav-item"><a href="/">Potions</a></li>
             </ul>
        </nav>
-       <section class="contenedor-principal-gryffindor">
-            <div class="intro-gryffindor">
+       <section class="contenedor-principal-house">
+            <div class="intro-house">
                 <h1 class="titulo-principal">Gryffindor</h1>
                 <h2 class="subtitulo">Wikipersonaje</h2>
-                <form class="form-gryffindor">
+                <form class="form-house">
                     <input type="hidden" name="house" value="Gryffindor" id="house">
-                    <input type="text" class="buscador-gryffindor" id="buscador-house">
-                    <img src="./assets/buscador.png" alt="buscador" class="img-buscador">   
+                    <input type="text" class="buscador-house" id="buscador-house">
+                    <img src="./assets/buscador.png" alt="buscador" class="img-buscador">  
+                    <select name="seleccion-filtracion" id="seleccion-filtracion">
+                        <option value="" disabled selected>Filtrar</option>
+                        <optgroup label="Gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </optgroup>
+                        <optgroup label="Ancestary">
+                            <option value="Muggle">Muggle</option>
+                            <option value="Pure-blood">Pure-blood</option>
+                        </optgroup>
+                    </select>
+                    <select name="order" id="order">
+                        <option value="" disabled selected>order</option>
+                        <option value="A-Z">Order A-Z</option>
+                        <option value="Z-A">Order Z-A</option>
+                    </select>
+                
                 </form>
             </div>
             <div class="cards-estudiante" id="contenedor-cards-estudiantes">
-               <!-- <div class="card-estudiante">
-                    <div class="contenedor-img" >
-                        <img class="card-estudiante__img" src="./assets/escudo-Gryffindor.png" alt="">
-                    </div>
-                   <div class="card-estudiante__info">
-                       <h3 class="card-estudiante__info--titulo">Ron weasley</h3>
-                       <div class="card-estudiante__info--birthdate">
-                        <p class="info-negrita">Birthdate:</p>
-                        <p>1 September 1998</p> 
-                       </div>
-                       <div class="card-estudiante__info--specie">
-                           <p class="info-negrita">Specie: </p>
-                           <p>Male</p>
-                        </div>
-                        <div class="card-estudiante__info--gender">
-                            <p class="info-negrita">Gender:</p>
-                            <p >Null</p>
-                        </div>
-                       <div class="card-estudiante__info--group">
-                           <p class="info-negrita">Group Association: </p>
-                           <p>Africa</p>
-                       </div>
-                   </div>
-               </div>
-               <div class="card-estudiante">
-                    <div class="contenedor-img" >
-                        <img class="card-estudiante__img" src="./assets/escudo-gryffindor.png" alt="">
-                    </div>
-                    <div class="card-estudiante__info">
-                   <h3 class="card-estudiante__info--titulo">Ron weasley</h3>
-                   <div class="card-estudiante__info--birthdate">
-                    <p class="info-negrita">Birthdate:</p>
-                    <p>1 September 1998</p> 
-                   </div>
-                   <div class="card-estudiante__info--specie">
-                       <p class="info-negrita">Specie: </p>
-                       <p>Male</p>
-                    </div>
-                    <div class="card-estudiante__info--gender">
-                        <p class="info-negrita">Gender:</p>
-                        <p >Null</p>
-                    </div>
-                   <div class="card-estudiante__info--group">
-                       <p class="info-negrita">Group Association: </p>
-                       <p>Africa</p>
-                   </div>
-               </div>
-                </div>
-                <div class="card-estudiante">
-                    <div class="contenedor-img" >
-                        <img class="card-estudiante__img" src="./assets/escudo-gryffindor.png" alt="">
-                    </div>
-                    <div class="card-estudiante__info">
-                   <h3 class="card-estudiante__info--titulo">Ron weasley</h3>
-                   <div class="card-estudiante__info--birthdate">
-                    <p class="info-negrita">Birthdate:</p>
-                    <p>1 September 1998</p> 
-                   </div>
-                   <div class="card-estudiante__info--specie">
-                       <p class="info-negrita">Specie: </p>
-                       <p>Male</p>
-                    </div>
-                    <div class="card-estudiante__info--gender">
-                        <p class="info-negrita">Gender:</p>
-                        <p >Null</p>
-                    </div>
-                   <div class="card-estudiante__info--group">
-                       <p class="info-negrita">Group Association: </p>
-                       <p>Africa</p>
-                   </div>
-               </div>
-                </div>
-                <div class="card-estudiante">
-                    <div class="contenedor-img" >
-                        <img class="card-estudiante__img" src="./assets/escudo-gryffindor.png" alt="">
-                    </div>
-                    <div class="card-estudiante__info">
-                   <h3 class="card-estudiante__info--titulo">Ron weasley</h3>
-                   <div class="card-estudiante__info--birthdate">
-                    <p class="info-negrita">Birthdate:</p>
-                    <p>1 September 1998</p> 
-                   </div>
-                   <div class="card-estudiante__info--specie">
-                       <p class="info-negrita">Specie: </p>
-                       <p>Male</p>
-                    </div>
-                    <div class="card-estudiante__info--gender">
-                        <p class="info-negrita">Gender:</p>
-                        <p >Null</p>
-                    </div>
-                   <div class="card-estudiante__info--group">
-                       <p class="info-negrita">Group Association: </p>
-                       <p>Africa</p>
-                   </div>
-               </div>
-                </div>
-                <div class="card-estudiante">
-                    <div class="contenedor-img" >
-                        <img class="card-estudiante__img" src="./assets/escudo-gryffindor.png" alt="">
-                    </div>
-                    <div class="card-estudiante__info">
-                   <h3 class="card-estudiante__info--titulo">Ron weasley</h3>
-                   <div class="card-estudiante__info--birthdate">
-                    <p class="info-negrita">Birthdate:</p>
-                    <p>1 September 1998</p> 
-                   </div>
-                   <div class="card-estudiante__info--specie">
-                       <p class="info-negrita">Specie: </p>
-                       <p>Male</p>
-                    </div>
-                    <div class="card-estudiante__info--gender">
-                        <p class="info-negrita">Gender:</p>
-                        <p >Null</p>
-                    </div>
-                   <div class="card-estudiante__info--group">
-                       <p class="info-negrita">Group Association: </p>
-                       <p>Africa</p>
-                   </div>
-               </div>
-                </div>
-                <div class="card-estudiante">
-                    <div class="contenedor-img" >
-                        <img class="card-estudiante__img" src="./assets/escudo-gryffindor.png" alt="">
-                    </div>
-                    <div class="card-estudiante__info">
-                   <h3 class="card-estudiante__info--titulo">Ron weasley</h3>
-                   <div class="card-estudiante__info--birthdate">
-                    <p class="info-negrita">Birthdate:</p>
-                    <p>1 September 1998</p> 
-                   </div>
-                   <div class="card-estudiante__info--specie">
-                       <p class="info-negrita">Specie: </p>
-                       <p>Male</p>
-                    </div>
-                    <div class="card-estudiante__info--gender">
-                        <p class="info-negrita">Gender:</p>
-                        <p >Null</p>
-                    </div>
-                   <div class="card-estudiante__info--group">
-                       <p class="info-negrita">Group Association: </p>
-                       <p>Africa</p>
-                   </div>
-               </div>
-                </div>   -->
            </div>
            <div class="intro-casa-gryffindor">      
 

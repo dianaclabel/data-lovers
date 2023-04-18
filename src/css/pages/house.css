@@ -36,11 +36,11 @@
   color: #ffffff;
 }
 
-.contenedor-principal-gryffindor {
+.contenedor-principal-house {
   width: 100%;
 }
 
-.intro-gryffindor {
+.intro-house {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,14 +61,14 @@
   margin-bottom: 2rem;
 }
 
-.form-gryffindor {
+.form-house {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   position: relative;
 }
-.buscador-gryffindor {
+.buscador-house {
   width: 30%;
   height: 35px;
   border-radius: 12px;
