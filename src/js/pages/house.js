@@ -1,6 +1,7 @@
 import { filterData, filterTypeAncestry } from "../data.js";
 import { dataNameToLowerCase } from "../data.js";
 import { filterGender } from "../data.js";
+import { orderName } from "../data.js";
 
 import data from "../../data/harrypotter/data.js";
 
@@ -10,6 +11,9 @@ const houseSelection = document.getElementById("house").value;
 const seleccionFiltracionSelect = document.getElementById(
   "seleccion-filtracion"
 );
+
+const seleccionOrdenarSelect = document.getElementById("seleccion-order");
+
 const buscadorInput = document.querySelector("#buscador-house");
 const contenedorCardsEstudiantesDiv = document.getElementById(
   "contenedor-cards-estudiantes"
@@ -51,11 +55,7 @@ seleccionFiltracionSelect.addEventListener("change", () => {
       estudiantesHouseSelection,
       valorSeleccion
     );
-    for (const personajeFiltradosGenero of personajesFiltradosGenero) {
-      contenedorCardsEstudiantesDiv.appendChild(
-        creacionCard(personajeFiltradosGenero)
-      );
-    }
+    iterarCadaPersonaje(personajesFiltradosGenero);
   } else if (
     valorSeleccion === "Muggle" ||
     valorSeleccion === "Pure-blood" ||
@@ -65,11 +65,20 @@ seleccionFiltracionSelect.addEventListener("change", () => {
       estudiantesHouseSelection,
       valorSeleccion
     );
-    for (const personajeFiltradoGenero of personajesFiltradosTipo) {
-      contenedorCardsEstudiantesDiv.appendChild(
-        creacionCard(personajeFiltradoGenero)
-      );
-    }
+    iterarCadaPersonaje(personajesFiltradosTipo);
+  }
+});
+
+seleccionOrdenarSelect.addEventListener("change", () => {
+  contenedorCardsEstudiantesDiv.innerHTML = "";
+  const valorSeleccion = seleccionOrdenarSelect.value;
+  const personajesNameAscendente = orderName(estudiantesHouseSelection);
+
+  if (valorSeleccion === "A-Z") {
+    iterarCadaPersonaje(personajesNameAscendente);
+  } else if (valorSeleccion === "Z-A") {
+    const personajesNameDescendente = personajesNameAscendente.reverse();
+    iterarCadaPersonaje(personajesNameDescendente);
   }
 });
 
@@ -141,6 +150,12 @@ function creacionCard(data) {
 
   console.log(cardEstudianteDiv);
   return cardEstudianteDiv;
+}
+
+function iterarCadaPersonaje(data) {
+  for (const personaje of data) {
+    contenedorCardsEstudiantesDiv.appendChild(creacionCard(personaje));
+  }
 }
 
 buscarPersonajes(data);

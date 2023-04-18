@@ -47,10 +47,16 @@ export const filterGender = function (data, valorSeleccion) {
     return personaje.gender === valorSeleccion;
   });
 };
-//filtrar a los personajes por tipo(muggle, pure blood)
+//filtrar a los personajes por tipo(muggle, pure blood y half blood)
 export const filterTypeAncestry = function (data, valorSeleccion) {
   return data.filter((personaje) => {
     return personaje.ancestry === valorSeleccion;
+  });
+};
+// ordenar a los personajes de A-Z
+export const orderName = function (data) {
+  return data.sort((a, b) => {
+    return a.name.localeCompare(b.name);
   });
 };
 
