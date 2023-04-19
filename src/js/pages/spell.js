@@ -1,13 +1,5 @@
-import { filterPotions, filterSpells } from "../data.js";
-const divHechizos = document.querySelector("#div-hechizos");
+import { filterSpells } from "../data.js";
 const inputBuscador = document.querySelector("#input-buscador");
-const inputBuscador1 = document.querySelector("#input-buscador1");
-/*
-if(divHechizos!==null){
-    divHechizos.addEventListener("click",()=>{ 
-        document.location = "spell.html";
-    });
-}*/
 
 if (inputBuscador !== null) {
   inputBuscador.addEventListener("keydown", (e) => {
@@ -16,24 +8,41 @@ if (inputBuscador !== null) {
 
     contenedorResultado.innerHTML = "";
     spellEncontrados.forEach((spell) => {
-      const contenedorSpell = document.createElement("div");
-      contenedorSpell.classList.add("spell-item");
-      contenedorSpell.innerHTML = `<h3>Nombre: ${spell.name}</h3><p>Descripcion: ${spell.description}</p><p>Tipo de hechizo: ${spell.spell_type}</p>`;
-      contenedorResultado.appendChild(contenedorSpell);
+        contenedorResultado.appendChild(mostrarSpell(spell));
     });
   });
 }
-if (inputBuscador1 !== null) {
-  inputBuscador1.addEventListener("keydown", (e) => {
-    const contenedorResultado1 = document.querySelector("#resultado-busqueda1");
-    const potionsEncontrados = filterPotions(inputBuscador1.value);
 
-    contenedorResultado1.innerHTML = "";
-    potionsEncontrados.forEach((potions) => {
-      const contenedorPotions = document.createElement("div");
-      contenedorPotions.classList.add("potions-item");
-      contenedorPotions.innerHTML = `<h3>Nombre: ${potions.name}</h3><p>Descripcion: ${potions.description}</p>`;
-      contenedorResultado1.appendChild(contenedorPotions);
-    });
-  });
-  }
+const mostrarSpell = (spell) => {
+  const contenedorSpell = document.createElement("div");
+  contenedorSpell.classList.add("spell-item");
+
+  const contenedorImgVarita = document.createElement("div");
+  contenedorImgVarita.classList.add("contenedor-img-varita");
+
+  const imagenVarita = document.createElement("img");
+  imagenVarita.classList.add("spell-item__img");
+  imagenVarita.setAttribute("src", "../../assets/varita.png");
+  contenedorImgVarita.appendChild(imagenVarita);
+
+  const contenedorCardInfoNombreDiv = document.createElement("div");
+  contenedorCardInfoNombreDiv.classList.add("spell-item__info");
+  contenedorCardInfoNombreDiv.innerHTML = `<b>Nombre: </b>${spell.name}`;
+
+  const contenedorCardInfoPronunciacionDiv = document.createElement("div");
+  contenedorCardInfoPronunciacionDiv.classList.add("spell-item__info");
+  contenedorCardInfoPronunciacionDiv.innerHTML = `<b>Pronunciación: </b>${spell.pronunciation}`;
+
+  const contenedorCardInfoHechizoTipoDiv = document.createElement("div");
+  contenedorCardInfoHechizoTipoDiv.classList.add("spell-item__info");
+  contenedorCardInfoHechizoTipoDiv.innerHTML = `<b>Tipo de Hechizo: </b>${spell.spell_type}`;
+
+
+  contenedorSpell.appendChild(contenedorImgVarita);
+  contenedorSpell.appendChild(contenedorCardInfoNombreDiv);
+  contenedorSpell.appendChild(contenedorCardInfoPronunciacionDiv);
+  contenedorSpell.appendChild(contenedorCardInfoHechizoTipoDiv);
+
+  
+  return contenedorSpell;
+}
