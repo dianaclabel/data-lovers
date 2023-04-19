@@ -69,3 +69,34 @@ body{
     padding: 5px 40px 5px 40px;
   
   }
+  /* Cards con el resultado de la busqueda */
+.resultado-busqueda1 {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 30px;
+    justify-content: center;
+    margin-top: 6%;
+  }
+  
+  .potions-item {
+    width: 85%;
+    background-color: #C78B1C;
+    border: #FFFBFB solid 20px;
+    margin: 2%
+  }
+  
+  .potions-item__img {
+    position: relative;
+    width: 90%;
+    top: 20%;
+    transform: rotate(-30deg);
+  }
+  
+  .potions-item__info {
+    position: relative;
+    top: -50px;
+    font-size: 24px;
+    margin: 10%;
+  
+  }
