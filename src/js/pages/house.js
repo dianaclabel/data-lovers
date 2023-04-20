@@ -18,12 +18,17 @@ const contenedorCardsPersonajesDiv = document.getElementById(
 );
 //Todos los personajes por casa
 const personajesHouseSelection = filterData(data, houseSelection);
+const seccionPresentacionDiv = document.getElementById("seccion-presentacion");
+contenedorCardsPersonajesDiv.style.display = "none";
 
 function buscarPersonajes() {
   buscadorInput.addEventListener("keyup", () => {
-    contenedorCardsPersonajesDiv.innerHTML = "";
+    mostrarContenedorCards();
     const valorBuscador = buscadorInput.value.toLowerCase();
-
+    if (!valorBuscador) {
+      contenedorCardsPersonajesDiv.style.display = "none";
+      seccionPresentacionDiv.style.display = "flex";
+    }
     const personajesEncontrados = personajesHouseSelection.filter(
       (estudianteHouseSelection) => {
         const namePersonajeMinuscula = dataNameToLowerCase(
@@ -42,7 +47,7 @@ function buscarPersonajes() {
 
 function filtrarPersonajes() {
   seleccionFiltracionSelect.addEventListener("change", () => {
-    contenedorCardsPersonajesDiv.innerHTML = "";
+    mostrarContenedorCards();
     const valorSeleccion = seleccionFiltracionSelect.value;
 
     if (valorSeleccion === "Male" || valorSeleccion === "Female") {
@@ -67,7 +72,7 @@ function filtrarPersonajes() {
 
 function ordenarPersonajes() {
   seleccionOrdenarSelect.addEventListener("change", () => {
-    contenedorCardsPersonajesDiv.innerHTML = "";
+    mostrarContenedorCards();
     const valorSeleccion = seleccionOrdenarSelect.value;
     const personajesNameAscendente = orderName(personajesHouseSelection);
 
@@ -159,6 +164,11 @@ function iterarCadaPersonaje(data) {
   for (const personaje of data) {
     contenedorCardsPersonajesDiv.appendChild(creacionCard(personaje));
   }
+}
+function mostrarContenedorCards() {
+  seccionPresentacionDiv.style.display = "none";
+  contenedorCardsPersonajesDiv.style.display = "grid";
+  contenedorCardsPersonajesDiv.innerHTML = "";
 }
 
 buscarPersonajes();
