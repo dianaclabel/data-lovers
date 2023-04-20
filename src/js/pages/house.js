@@ -107,16 +107,18 @@ function creacionCard(data) {
   contenedorCardInfoDiv.appendChild(cardInfoTituloH3);
 
   const propiedadInfo = [
-    "Birthdate:",
-    "Specie:",
-    "Gender:",
-    "Group Association:",
+    "Birth :",
+    "Specie :",
+    "Gender :",
+    "Ancestry :",
+    "Group :",
   ];
 
   const valorInfo = [
     personajeEncontrado.birth,
     personajeEncontrado.species,
     personajeEncontrado.gender,
+    personajeEncontrado.ancestry,
     personajeEncontrado.associated_groups[0],
   ];
 
@@ -124,23 +126,26 @@ function creacionCard(data) {
     "card-personaje__info--birthdate",
     "card-personaje__info--specie",
     "card-personaje__info--gender",
+    "card-personaje__info--ancestry",
     "card-personaje__info--group",
   ];
 
   for (let i = 0; i < nombreClasePadre.length; i++) {
-    const contenedorPropiedadDiv = document.createElement("div");
-    contenedorPropiedadDiv.classList.add(nombreClasePadre[i]);
+    if (valorInfo[i] !== null) {
+      const contenedorPropiedadDiv = document.createElement("div");
+      contenedorPropiedadDiv.classList.add(nombreClasePadre[i]);
 
-    const elementNegritaP = document.createElement("P");
-    elementNegritaP.classList.add("info-negrita");
-    elementNegritaP.innerText = propiedadInfo[i];
+      const elementNegritaP = document.createElement("P");
+      elementNegritaP.classList.add("info-negrita");
+      elementNegritaP.innerText = propiedadInfo[i];
 
-    const elementP = document.createElement("P");
-    elementP.innerText = valorInfo[i];
+      const elementP = document.createElement("P");
+      elementP.innerText = valorInfo[i];
 
-    contenedorPropiedadDiv.appendChild(elementNegritaP);
-    contenedorPropiedadDiv.appendChild(elementP);
-    contenedorCardInfoDiv.appendChild(contenedorPropiedadDiv);
+      contenedorPropiedadDiv.appendChild(elementNegritaP);
+      contenedorPropiedadDiv.appendChild(elementP);
+      contenedorCardInfoDiv.appendChild(contenedorPropiedadDiv);
+    }
   }
 
   cardPersonajeDiv.appendChild(contenedorImgDiv);

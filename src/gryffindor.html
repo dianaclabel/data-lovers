@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2edd298443.js" crossorigin="anonymous"></script>
 </head>
 <body class="body-house body-gryffindor">
         <nav class="nav-house">
@@ -27,33 +28,39 @@
                 <h2 class="subtitulo">Wikipersonaje</h2>
                 <form class="form-house">
                     <input type="hidden" name="house" value="Gryffindor" id="house">
-                    <input type="text" class="buscador-house" id="buscador-house">
+                    <input type="text" class="buscador-house" id="buscador-house" placeholder="Busca a tu personaje">
                     <img src="./assets/buscador.png" alt="buscador" class="img-buscador">  
-                    <select name="seleccion-filtracion" id="seleccion-filtracion">
-                        <option value="" disabled selected>Filtrar</option>
-                        <optgroup label="Gender">
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </optgroup>
-                        <optgroup label="Ancestary">
-                            <option value="Muggle">Muggle</option>
-                            <option value="Pure-blood">Pure-blood</option>
-                            <option value="Half-blood">Half-blood</option>
-                        </optgroup>
+                    <select name="seleccion-filtracion" class="seleccion-filtracion" id="seleccion-filtracion">
+                        <option value="" disabled selected class="option-image option-house"> Filtrar ☶ </option>
+                            <option value="" disabled class="option-house categoria">Gender</option>
+                            <option value="Male" class="option-house">Male</option>
+                            <option value="Female" class="option-house">Female</option>
+                            <option value="" disabled class="option-house categoria"s>Ancestry</option>
+                            <option value="Muggle" class="option-house">Muggle</option>
+                            <option value="Pure-blood" class="option-house">Pure-blood</option>
+                            <option value="Half-blood" class="option-house">Half-blood</option>
                     </select>
-                    <select name="order" id="seleccion-order">
-                        <option value="" disabled selected>order</option>
-                        <option value="A-Z">Order A-Z</option>
-                        <option value="Z-A">Order Z-A</option>
+                    <select name="order" id="seleccion-order" class="seleccion-order">
+                        <option value="" disabled selected class="option-house">order ▼ </option>
+                        <option value="A-Z" class="option-house">Order A-Z</option>
+                        <option value="Z-A" class="option-house">Order Z-A</option>
                     </select>
                 
                 </form>
             </div>
-            <div class="cards-personajes" id="contenedor-cards-personajes">
+            <div class="cards-personajes" id="contenedor-cards-personajes" style="display:none">
            </div>
-           <div class="intro-casa-gryffindor">      
-
-           </div>
+           <div class="presentacion-house"> 
+                <div class="presentacion-info">
+                    <h2 class="lema-house">"Vamos a enseñar a todos aquellos con actos de valor hacia su nombre y su corazón".</h2>
+                    <p class="informacion-house">Gryffindor es una de las cuatro casas del Colegio Hogwarts de Magia y Hechicería, fundada por Godric Gryffindor. Su animal emblemático es el león y sus colores son el rojo escarlata y el dorado. Minerva McGonagall es la más reciente jefa de la casa. Sir Nicholas de Mimsy-Porpington también conocido como "Nick Casi Decapitado" es el fantasma de la casa. Las principales características de los Gryffindor son el coraje y la caballerosidad.</p>
+                </div>
+                    
+                <div class=" contenedor-img-presentacion">
+                    <img src="./assets/img-presents-gryffindor.jpg" class="imagen-presentacion" alt="">
+                    
+                </div>
+            </div>
        </section>
     
    

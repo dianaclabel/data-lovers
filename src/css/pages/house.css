@@ -2,11 +2,11 @@
 
 /*gryffindor*/
 .body-house {
-  background-size: cover;
+  background-size: contain;
 }
 
 .body-gryffindor {
-  background-image: url(/assets/fondo-gryffindor2.jpg);
+  background-image: url(/assets/fondo-gryffindor-4.jpg);
 }
 .nav-house {
   height: 10vh;
@@ -69,7 +69,7 @@
   position: relative;
 }
 .buscador-house {
-  width: 30%;
+  width: 20%;
   height: 35px;
   border-radius: 12px;
   outline: none;
@@ -79,9 +79,38 @@
 .img-buscador {
   width: 25px;
   position: absolute;
-  right: 680px;
+  right: 940px;
 }
 
+.seleccion-filtracion,
+.seleccion-order {
+  width: 150px;
+  height: 35px;
+  border-radius: 8px;
+  margin-left: 15px;
+  -webkit-appearance: none;
+  outline: none;
+  font-size: 22px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.categoria {
+  background-color: var(--color-cards-gryffindor);
+  padding: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.option-image {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.option-house {
+  text-align: center;
+  font-size: 20px;
+}
 .cards-personajes {
   margin: 100px 30px 50px;
   display: grid;
@@ -124,15 +153,79 @@
 .card-personaje__info--birthdate,
 .card-personaje__info--specie,
 .card-personaje__info--group,
+.card-personaje__info--ancestry,
 .card-personaje__info--gender {
   display: flex;
   margin-bottom: 15px;
   color: #ffffff;
   font-family: var(--fuente-primary);
 }
-
+.card-personaje__info--group > .info-negrita {
+  width: 80px;
+}
+.card-personaje__info--birthdate > .info-negrita {
+  width: 70px;
+}
+.card-personaje__info--ancestry > .info-negrita {
+  width: 95px;
+}
 .info-negrita {
   font-weight: 600;
   font-size: 18px;
   margin-right: 5px;
+}
+
+.presentacion-house {
+  width: 65%;
+  height: 520px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 4.5rem;
+  -webkit-box-shadow: 13px 10px 296px -36px rgba(224, 156, 54, 1);
+  -moz-box-shadow: 13px 10px 296px -36px rgba(224, 156, 54, 1);
+  box-shadow: 13px 10px 296px -36px rgba(224, 156, 54, 1);
+
+  border-radius: 20px;
+}
+
+.presentacion-info {
+  width: 50%;
+  background-color: black;
+  opacity: 0.6;
+  border-radius: 20px 0 0 20px;
+}
+.lema-house {
+  font-size: 2rem;
+  font-family: var(--fuente-secondary);
+  text-align: center;
+  color: var(--color-primary);
+  margin: 3rem 3rem 1.5rem 2rem;
+}
+
+.informacion-house {
+  font-family: var(--fuente-primary);
+  font-size: 1.2rem;
+  margin: 0 20px;
+  color: white;
+  text-align: justify;
+  line-height: 2rem;
+  padding: 25px 25px 40px;
+}
+.contenedor-img-presentacion {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.imagen-presentacion {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  margin: 0 auto;
+  transition: transform 0.2s;
+}
+
+.imagen-presentacion:hover {
+  transform: scale(1.1);
+  border-radius: 20px;
 }
