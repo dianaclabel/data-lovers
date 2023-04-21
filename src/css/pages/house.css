@@ -8,10 +8,15 @@
 .body-gryffindor {
   background-image: url(/assets/fondo-gryffindor-4.jpg);
 }
+
+.contenedor-icono {
+  display: none;
+}
 .nav-house {
   height: 10vh;
   width: 100%;
 }
+
 .nav-house__items {
   height: 100%;
   display: flex;
@@ -248,6 +253,54 @@
 
 /* diseño responsivo mobile */
 @media (min-width: 375px) and (max-width: 450px) {
+  .contenedor-icono {
+    display: block;
+    position: relative;
+    z-index: 10;
+  }
+
+  .contenedor-icono .img-menu {
+    width: 55px;
+    margin-left: 20px;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .nav-house__items {
+    height: 100vh;
+    width: 60%;
+    display: none;
+    background-color: #171010;
+    position: absolute;
+    padding-top: 70px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .nav-item {
+    margin-top: 25px;
+    padding: 15px;
+    width: 100%;
+  }
+
+  .nav-item > a {
+    padding-left: 60px;
+  }
+
+  .nav-item:hover {
+    background-color: #3a0404;
+  }
+
+  .titulo-principal {
+    font-size: 2.5rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .subtitulo {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
   .presentacion-house {
     width: 80%;
     height: 100%;

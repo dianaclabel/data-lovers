@@ -19,6 +19,9 @@ const contenedorCardsPersonajesDiv = document.getElementById(
 //Todos los personajes por casa
 const personajesHouseSelection = filterData(data, houseSelection);
 const seccionPresentacionDiv = document.getElementById("seccion-presentacion");
+const iconMenuImg = document.getElementById("icon-img-menu");
+const navMenu = document.getElementById("nav-menu");
+
 contenedorCardsPersonajesDiv.style.display = "none";
 
 function buscarPersonajes() {
@@ -177,6 +180,21 @@ function mostrarContenedorCards() {
   contenedorCardsPersonajesDiv.innerHTML = "";
 }
 
+function navmenuHamburguesa() {
+  iconMenuImg.addEventListener("click", (e) => {
+    const urlImgMenu = e.target.getAttribute("src");
+
+    if (urlImgMenu === "./assets/menu-primary.png") {
+      e.target.setAttribute("src", "./assets/arrow-left-menu.png");
+      navMenu.style.display = "block";
+    } else {
+      e.target.setAttribute("src", "./assets/menu-primary.png");
+      navMenu.style.display = "none";
+    }
+  });
+}
+
 buscarPersonajes();
 filtrarPersonajes();
 ordenarPersonajes();
+navmenuHamburguesa();
