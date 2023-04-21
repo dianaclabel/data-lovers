@@ -8,6 +8,9 @@
 .body-gryffindor {
   background-image: url(/assets/fondo-gryffindor-4.jpg);
 }
+.body-slytherin {
+  background-image: url(/assets/fondo-slytherin.jpg);
+}
 
 .contenedor-icono {
   display: none;
@@ -41,6 +44,10 @@
   color: #ffffff;
 }
 
+.nav-item___slytherin > a {
+  color: #ffffff;
+}
+
 .contenedor-principal-house {
   width: 100%;
 }
@@ -57,6 +64,10 @@
   color: var(--color-primary);
   font-family: var(--fuente-secondary);
   margin-bottom: 2rem;
+}
+
+.titulo-principal-slytherin {
+  color: rgb(218, 213, 213);
 }
 
 .subtitulo {
@@ -110,6 +121,12 @@
 .selec-order-gryffindor {
   color: var(--color-cards-gryffindor);
 }
+
+.select-slytherin,
+.selec-order-slytherin {
+  color: var(--color-cards-slytherin);
+}
+
 .categoria {
   padding: 10px;
   font-size: 20px;
@@ -122,6 +139,9 @@
   background-color: var(--color-cards-gryffindor);
 }
 
+.cat-slytherin {
+  background-color: #2a623d;
+}
 .option-image {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -150,6 +170,9 @@
 .card-gryffindor {
   background-color: var(--color-cards-gryffindor);
 }
+.card-slytherin {
+  background-color: var(--color-cards-slytherin);
+}
 .card-personaje__info--titulo {
   font-family: var(--fuente-secondary);
   font-size: 2rem;
@@ -165,8 +188,14 @@
 .contenedor-img-gryffindor {
   background-color: #3a0404;
 }
+
+.contenedor-img-slytherin {
+  background-color: var(--color-secondary-slytherin);
+  height: 300px;
+  padding-top: 50px;
+}
 .card-personaje__img {
-  width: 200px;
+  width: 220px;
 }
 .card-personaje__info {
   margin: 0 auto;
@@ -184,13 +213,13 @@
   font-family: var(--fuente-primary);
 }
 .card-personaje__info--group > .info-negrita {
-  width: 80px;
+  width: 90px;
 }
 .card-personaje__info--birthdate > .info-negrita {
-  width: 70px;
+  width: 90px;
 }
 .card-personaje__info--ancestry > .info-negrita {
-  width: 95px;
+  width: 110px;
 }
 .info-negrita {
   font-weight: 600;
@@ -211,10 +240,19 @@
 
 .presentacion-info {
   width: 50%;
-  background-color: #2c0404;
-  opacity: 0.7;
   border-radius: 20px 0 0 20px;
 }
+
+.presents-info-gryffindor {
+  background-color: #190909;
+  opacity: 0.7;
+}
+
+.presents-info-slytherin {
+  background-color: var(--color-secondary-slytherin);
+  opacity: 0.8;
+}
+
 .lema-house {
   font-size: 2rem;
   font-family: var(--fuente-secondary);
@@ -238,12 +276,23 @@
   margin: 0 auto;
   border-radius: 20px;
 }
+
 .imagen-presentacion {
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: 100%;
   border-radius: 0 20px 20px 0;
   margin: 0 auto;
   transition: transform 0.2s;
+}
+
+.imagen-presentacion-gryffindor {
+  background-image: url(../../assets/img-presents-gryffindor.jpg);
+}
+
+.imagen-presentacion-slytherin {
+  background-image: url(../../assets/img-presents-slytherin.jpg);
 }
 
 .imagen-presentacion:hover {
@@ -288,8 +337,12 @@
     padding-left: 60px;
   }
 
-  .nav-item:hover {
+  .nav-item__gryffindor:hover {
     background-color: #3a0404;
+  }
+
+  .nav-item___slytherin:hover {
+    background-color: #2a623d;
   }
 
   .titulo-principal {
@@ -387,6 +440,10 @@
   .buscador-house {
     width: 80%;
     margin-bottom: 20px;
+  }
+  .img-buscador {
+    right: 42px;
+    bottom: 60px;
   }
 
   .contenedor-selectores {
