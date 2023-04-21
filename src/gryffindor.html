@@ -29,22 +29,24 @@
                 <form class="form-house">
                     <input type="hidden" name="house" value="Gryffindor" id="house">
                     <input type="text" class="buscador-house" id="buscador-house" placeholder="Busca a tu personaje">
-                    <img src="./assets/buscador.png" alt="buscador" class="img-buscador">  
-                    <select name="seleccion-filtracion" class="seleccion-filtracion" id="seleccion-filtracion">
-                        <option value="" disabled selected class="option-image option-house"> Filtrar ☶ </option>
-                            <option value="" disabled class="option-house categoria">Gender</option>
-                            <option value="Male" class="option-house">Male</option>
-                            <option value="Female" class="option-house">Female</option>
-                            <option value="" disabled class="option-house categoria"s>Ancestry</option>
-                            <option value="Muggle" class="option-house">Muggle</option>
-                            <option value="Pure-blood" class="option-house">Pure-blood</option>
-                            <option value="Half-blood" class="option-house">Half-blood</option>
-                    </select>
-                    <select name="order" id="seleccion-order" class="seleccion-order">
-                        <option value="" disabled selected class="option-house">order ▼ </option>
-                        <option value="A-Z" class="option-house">Order A-Z</option>
-                        <option value="Z-A" class="option-house">Order Z-A</option>
-                    </select>
+                    <img src="./assets/buscador.png" alt="buscador" class="img-buscador">
+                    <div class="contenedor-selectores">
+                        <select name="seleccion-filtracion" class="seleccion-filtracion select-gryffindor" id="seleccion-filtracion">
+                            <option value="" disabled selected class="option-image option-house"> Filtrar ☶ </option>
+                                <option value="" disabled class="option-house categoria cat-gryffindor">Gender</option>
+                                <option value="Male" class="option-house">Male</option>
+                                <option value="Female" class="option-house">Female</option>
+                                <option value="" disabled class="option-house categoria cat-gryffindor"s>Ancestry</option>
+                                <option value="Muggle" class="option-house">Muggle</option>
+                                <option value="Pure-blood" class="option-house">Pure-blood</option>
+                                <option value="Half-blood" class="option-house">Half-blood</option>
+                        </select>
+                        <select name="order" id="seleccion-order" class="seleccion-order selec-order-gryffindor">
+                            <option value="" disabled selected class="option-house">order ▼ </option>
+                            <option value="A-Z" class="option-house">Order A-Z</option>
+                            <option value="Z-A" class="option-house">Order Z-A</option>
+                        </select>
+                     </div>
                 
                 </form>
             </div>

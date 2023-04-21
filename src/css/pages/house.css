@@ -77,6 +77,10 @@
   border: none;
 }
 
+.buscador-house::placeholder {
+  font-size: 1.2rem;
+  padding: 2px;
+}
 .img-buscador {
   width: 25px;
   position: absolute;
@@ -87,22 +91,30 @@
 .seleccion-order {
   width: 150px;
   height: 35px;
-  border-radius: 8px;
+  border-radius: 5px;
   margin-left: 15px;
   -webkit-appearance: none;
   outline: none;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 20px;
+  /* font-weight: 500; */
   padding-left: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.select-gryffindor,
+.selec-order-gryffindor {
+  color: var(--color-cards-gryffindor);
+}
 .categoria {
-  background-color: var(--color-cards-gryffindor);
   padding: 10px;
   font-size: 20px;
   color: #ffffff;
   font-weight: 700;
   text-align: center;
+}
+
+.cat-gryffindor {
+  background-color: var(--color-cards-gryffindor);
 }
 
 .option-image {
@@ -124,11 +136,14 @@
   width: 550px;
   min-height: 300px;
   padding: 10px;
-  background-color: var(--color-cards-gryffindor);
   border: var(--color-primary) solid 4px;
   display: flex;
   align-items: center;
   border-radius: 25px;
+}
+
+.card-gryffindor {
+  background-color: var(--color-cards-gryffindor);
 }
 .card-personaje__info--titulo {
   font-family: var(--fuente-secondary);
@@ -139,9 +154,11 @@
 }
 
 .contenedor-img {
-  background-color: #3a0404;
   margin: 12px;
   border-radius: 15px;
+}
+.contenedor-img-gryffindor {
+  background-color: #3a0404;
 }
 .card-personaje__img {
   width: 200px;
@@ -189,8 +206,8 @@
 
 .presentacion-info {
   width: 50%;
-  background-color: black;
-  opacity: 0.6;
+  background-color: #2c0404;
+  opacity: 0.7;
   border-radius: 20px 0 0 20px;
 }
 .lema-house {
@@ -269,5 +286,65 @@
 
   .imagen-presentacion {
     border-radius: 0 0 20px 20px;
+  }
+
+  .cards-personajes {
+    margin: 50px 20px;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    justify-content: center;
+  }
+
+  .card-personaje {
+    width: 340px;
+    padding: 20px;
+  }
+
+  .contenedor-img {
+    display: none;
+  }
+
+  .card-personaje__img {
+    display: none;
+  }
+
+  .card-personaje__info--titulo {
+    font-size: 1.8rem;
+  }
+
+  .card-personaje__info--group > .info-negrita {
+    width: 90px;
+  }
+  .card-personaje__info--birthdate > .info-negrita {
+    width: 90px;
+  }
+  .card-personaje__info--ancestry > .info-negrita {
+    width: 95px;
+  }
+  .info-negrita {
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+  .form-house {
+    flex-direction: column;
+  }
+
+  .buscador-house {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .contenedor-selectores {
+    width: 100%;
+    text-align: center;
+  }
+
+  .seleccion-filtracion,
+  .seleccion-order {
+    width: 120px;
+    margin-left: 0;
+    font-size: 18px;
   }
 }

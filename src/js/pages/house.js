@@ -90,9 +90,15 @@ function creacionCard(data) {
 
   const cardPersonajeDiv = document.createElement("div");
   cardPersonajeDiv.classList.add("card-personaje");
+  cardPersonajeDiv.classList.add(
+    `card-${personajeEncontrado.house.toLowerCase()}`
+  );
 
   const contenedorImgDiv = document.createElement("div");
   contenedorImgDiv.classList.add("contenedor-img");
+  contenedorImgDiv.classList.add(
+    `contenedor-img-${personajeEncontrado.house.toLowerCase()}`
+  );
 
   const imagenCasaImg = document.createElement("img");
   imagenCasaImg.classList.add("card-personaje__img");
