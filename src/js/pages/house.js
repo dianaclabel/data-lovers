@@ -184,12 +184,20 @@ function navmenuHamburguesa() {
   iconMenuImg.addEventListener("click", (e) => {
     const urlImgMenu = e.target.getAttribute("src");
 
-    if (urlImgMenu === "./assets/menu-primary.png") {
+    if (
+      urlImgMenu === "./assets/menu-primary.png" ||
+      urlImgMenu === "./assets/menu-secondary.png"
+    ) {
       e.target.setAttribute("src", "./assets/arrow-left-menu.png");
       navMenu.style.display = "block";
     } else {
-      e.target.setAttribute("src", "./assets/menu-primary.png");
-      navMenu.style.display = "none";
+      if (houseSelection === "Hufflepuff") {
+        e.target.setAttribute("src", "./assets/menu-secondary.png");
+        navMenu.style.display = "none";
+      } else {
+        e.target.setAttribute("src", "./assets/menu-primary.png");
+        navMenu.style.display = "none";
+      }
     }
   });
 }
