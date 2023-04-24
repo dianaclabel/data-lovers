@@ -1,21 +1,28 @@
-import { example, anotherExample } from "../src/js/data.js";
+import { filterGender } from "../src/js/data.js";
 
-describe("example", () => {
-  it("is a function", () => {
-    expect(typeof example).toBe("function");
-  });
+const characters = [
+  { name: "Juan", gender: "Male" },
+  { name: "Carla", gender: "Female" },
+  { name: "Rodrigo", gender: "Male" },
+];
 
-  it("returns `example`", () => {
-    expect(example()).toBe("example");
-  });
-});
+const charactersResult = [
+  { name: "Juan", gender: "Male" },
+  { name: "Rodrigo", gender: "Male" },
+];
 
-describe("anotherExample", () => {
-  it("is a function", () => {
-    expect(typeof anotherExample).toBe("function");
-  });
-
-  it("returns `anotherExample`", () => {
-    expect(anotherExample()).toBe("OMG");
+describe("test function gender", () => {
+  it("Filter male", () => {
+    expect(filterGender(characters, "Male")).toEqual(charactersResult);
   });
 });
+
+// describe("anotherExample", () => {
+//   it("is a function", () => {
+//     expect(typeof anotherExample).toBe("function");
+//   });
+
+//   it("returns `anotherExample`", () => {
+//     expect(anotherExample()).toBe("OMG");
+//   });
+// });

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gryffindor</title>
+    <title>Slytherin</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/pages/house.css">
     <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
@@ -12,39 +12,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="body-house body-gryffindor" id="fondo-cards">
-
+<body class="body-house body-slytherin" id="fondo-cards">
+ 
         <nav class="nav-house">
             <div class="contenedor-icono">
                 <img src="./assets/menu-primary.png" class="img-menu" id="icon-img-menu" alt="icono-menu">
-            </div>
+            </div>      
             <ul class="nav-house__items" id="nav-menu">
-               <li class="nav-item nav-item__gryffindor"><a href="./index.html">Home</i></a></li>
-               <li class="nav-item nav-item__gryffindor"><a href="/">Books</a></li>
-               <li class="nav-item nav-item__gryffindor"><a href="./#seccion-hechizos-pociones">Spells</a></li>
-               <li class="nav-item nav-item__gryffindor"><a href="./#seccion-hechizos-pociones">Potions</a></li>
+               <li class="nav-item nav-item___slytherin"><a href="./index.html">Home</i></a></li>
+               <li class="nav-item nav-item___slytherin"><a href="/">Books</a></li>
+               <li class="nav-item nav-item___slytherin"><a href="./#seccion-hechizos-pociones">Spells</a></li>
+               <li class="nav-item nav-item___slytherin"><a href="./#seccion-hechizos-pociones">Potions</a></li>
             </ul>
        </nav>
        <section class="contenedor-principal-house">
             <div class="intro-house">
-                <h1 class="titulo-principal">Gryffindor</h1>
+                <h1 class="titulo-principal titulo-principal-slytherin">
+                    Slytherin
+                </h1>
                 <h2 class="subtitulo">Wikipersonaje</h2>
                 <form class="form-house">
-                    <input type="hidden" name="house" value="Gryffindor" id="house">
+                    <input type="hidden" name="house" value="Slytherin" id="house">
                     <input type="text" class="buscador-house" id="buscador-house" placeholder="Busca a tu personaje">
                     <img src="./assets/buscador.png" alt="buscador" class="img-buscador">
                     <div class="contenedor-selectores">
-                        <select name="seleccion-filtracion" class="seleccion-filtracion select-gryffindor" id="seleccion-filtracion">
+                        <select name="seleccion-filtracion" class="seleccion-filtracion select-slytherin" id="seleccion-filtracion">
                             <option value="" disabled selected class="option-image option-house"> Filtrar ☶ </option>
-                                <option value="" disabled class="option-house categoria cat-gryffindor">Gender</option>
+                                <option value="" disabled class="option-house categoria cat-slytherin">Gender</option>
                                 <option value="Male" class="option-house">Male</option>
                                 <option value="Female" class="option-house">Female</option>
-                                <option value="" disabled class="option-house categoria cat-gryffindor"s>Ancestry</option>
+                                <option value="" disabled class="option-house categoria cat-slytherin"s>Ancestry</option>
                                 <option value="Muggle" class="option-house">Muggle</option>
                                 <option value="Pure-blood" class="option-house">Pure-blood</option>
                                 <option value="Half-blood" class="option-house">Half-blood</option>
                         </select>
-                        <select name="order" id="seleccion-order" class="seleccion-order selec-order-gryffindor">
+                        <select name="order" id="seleccion-order" class="seleccion-order selec-order-slytherin">
                             <option value="" disabled selected class="option-house">order ▼ </option>
                             <option value="A-Z" class="option-house">Order A-Z</option>
                             <option value="Z-A" class="option-house">Order Z-A</option>
@@ -56,13 +58,13 @@
             <div class="cards-personajes" id="contenedor-cards-personajes" >
            </div>
            <div class="presentacion-house" id="seccion-presentacion"> 
-                <div class="presentacion-info presents-info-gryffindor">
-                    <h2 class="lema-house">"Vamos a enseñar a todos aquellos con actos de valor hacia su nombre y su corazón".</h2>
-                    <p class="informacion-house">Gryffindor es una de las cuatro casas del Colegio Hogwarts de Magia y Hechicería, fundada por Godric Gryffindor. Su animal emblemático es el león y sus colores son el rojo escarlata y el dorado. Minerva McGonagall es la más reciente jefa de la casa. Sir Nicholas de Mimsy-Porpington también conocido como "Nick Casi Decapitado" es el fantasma de la casa. Las principales características de los Gryffindor son el coraje y la caballerosidad.</p>
+                <div class="presentacion-info presents-info-slytherin">
+                    <h2 class="lema-house">" Harás tus verdaderos amigos, esa gente astuta usa cualquier medio, para lograr sus fines " </h2>
+                    <p class="informacion-house">Slytherin es una de las cuatro casas del Colegio Hogwarts de Magia y Hechicería, fundada por Salazar Slytherin. Al establecer la casa, Salazar instruyó al Sombrero Seleccionador para que seleccionara a los estudiantes que tenían las características particulares que él valoraba más. Esas características incluyen: astucia, ingenio y ambición. </p>
                 </div>
                     
                 <div class=" contenedor-img-presentacion">
-                    <div class="imagen-presentacion imagen-presentacion-gryffindor"></div>
+                    <div class="imagen-presentacion imagen-presentacion-slytherin"></div>
                     
                 </div>
             </div>
