@@ -139,10 +139,6 @@ div .casa__info-total {
   flex: 1 0 auto;
 }
 
-.contenedor-carrusel:hover .card-libro {
-  opacity: 0.3;
-}
-
 .contenedor-carrusel .card-libro:hover {
   transform: scale(1.1);
   opacity: 1;

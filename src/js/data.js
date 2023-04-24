@@ -59,6 +59,7 @@ export const orderName = function (data) {
     return a.name.localeCompare(b.name);
   });
 };
+//books
 
 //hechizos
 export const filterSpells = (spellName) => {
