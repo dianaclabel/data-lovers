@@ -1,4 +1,7 @@
 /* nav-principal */
+html {
+  scroll-behavior: smooth;
+}
 
 .navegacion-princiapl {
   width: 100%;
@@ -24,6 +27,7 @@
 
 .nav-principal {
   height: 55px;
+  width: 100%;
 }
 
 .nav-principal__items {
