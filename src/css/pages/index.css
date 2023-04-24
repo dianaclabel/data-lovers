@@ -1,4 +1,62 @@
-/* Estilos para H.U 1 */
+/* nav-principal */
+
+.navegacion-princiapl {
+  width: 100%;
+  height: 370px;
+}
+
+.contenedor-imagen-principal {
+  position: relative;
+}
+.img-navegacion-principal {
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  display: block;
+}
+
+.titulo-principal-home {
+  position: absolute;
+  width: 50%;
+  top: 43px;
+  left: 24%;
+}
+
+.nav-principal {
+  height: 55px;
+}
+
+.nav-principal__items {
+  background-color: rgba(9, 7, 42, 1);
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-principal__item {
+  border-radius: 15px;
+  list-style: none;
+  font-family: var(--fuente-secondary);
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: var(--color-primary);
+  width: 200px;
+  height: 45px;
+  transition: width 2s;
+}
+
+.nav-principal__item a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-principal__item:hover {
+  width: 300px;
+  background-color: rgb(248, 209, 118);
+}
+
+/* Estilos para H.U 1- Home-principal-house*/
 .casas {
   background: rgb(42, 37, 125);
   background: radial-gradient(
