@@ -148,3 +148,27 @@ div .casa__info-total {
 
 @media (min-width: 1440px) {
 }
+.footer-H {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 2%;
+  background:  #0B092F;
+  color: whitesmoke;
+}
+.imagen-H-P {
+  width: 25%;
+}
+.lista ,.lista1, .lista2 {
+  list-style: none;
+  width: 33%;
+  font-family: 'Roboto';
+  font-style: normal;
+}
+.lista1 h3, .lista2 h3 {
+  color: rgba(199, 139, 28, 1);
+}
+.redes {
+  width: 25%;
+}
