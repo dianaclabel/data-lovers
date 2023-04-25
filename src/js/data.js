@@ -32,7 +32,6 @@ export const filterData = function (data, houseSelection) {
   const personajesHouseSelection = data.characters.filter(
     (character) => character.house === houseSelection
   );
-  console.log(personajesHouseSelection);
   return personajesHouseSelection;
 };
 
@@ -59,7 +58,10 @@ export const orderName = function (data) {
     return a.name.localeCompare(b.name);
   });
 };
-
+//books
+export const filterBooks = function (data) {
+  return data.books.filter((element) => element);
+};
 //hechizos
 export const filterSpells = (spellName) => {
   return data.spells.filter((spell) => spell.name.includes(spellName));
