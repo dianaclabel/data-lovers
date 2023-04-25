@@ -6,9 +6,10 @@ if (inputBuscador1 !== null) {
     const contenedorResultado1 = document.querySelector("#resultado-busqueda1");
     const potionsEncontrados = filterPotions(inputBuscador1.value);
 
-    contenedorResultado1.innerHTML = "<div class='potions-item__title'><h3>Nombre  de pocion</h3><h3>Descripción</h3></div>";
+    contenedorResultado1.innerHTML =
+      "<div class='potions-item__title'><h3>Nombre  de pocion</h3><h3>Descripción</h3></div>";
     potionsEncontrados.forEach((potions) => {
-        contenedorResultado1.appendChild(mostrarPotions(potions));
+      contenedorResultado1.appendChild(mostrarPotions(potions));
     });
   });
 }
@@ -36,8 +37,6 @@ const mostrarPotions = (potions) => {
   contenedorPotions.appendChild(contenedorImgPotions);
   contenedorPotions.appendChild(contenedorCardInfoNombreDiv);
   contenedorPotions.appendChild(contenedorCardInfoDescripcionDiv);
- 
 
-  
   return contenedorPotions;
-}
+};
