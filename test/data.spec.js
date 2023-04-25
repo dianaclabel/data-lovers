@@ -16,15 +16,20 @@ const charactersGryffindor = [
   { name: "Juan", gender: "Male", house: "Gryffindor", ancestry: "Pure-blood" },
   {
     name: "Rodrigo",
-    ender: "Male",
+    gender: "Male",
     house: "Gryffindor",
     ancestry: "Pure-blood",
   },
 ];
 
 const charactersMale = [
-  { name: "Juan", gender: "Male" },
-  { name: "Rodrigo", gender: "Male" },
+  { name: "Juan", gender: "Male", house: "Gryffindor", ancestry: "Pure-blood" },
+  {
+    name: "Rodrigo",
+    gender: "Male",
+    house: "Gryffindor",
+    ancestry: "Pure-blood",
+  },
 ];
 
 describe("test function gender", () => {
@@ -35,7 +40,9 @@ describe("test function gender", () => {
 
 describe("test function for character of each house", () => {
   it("function for characters of gryffindor", () => {
-    expect(filterData(characters, "Gryffindor")).toEqual(charactersGryffindor);
+    expect(filterData({ characters }, "Gryffindor")).toEqual(
+      charactersGryffindor
+    );
   });
 });
 
