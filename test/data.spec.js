@@ -1,8 +1,8 @@
-import { filterData, filterGender } from "../src/js/data.js";
+import { computeStats, filterData, filterGender } from "../src/js/data.js";
 
 const characters = [
   { name: "Juan", gender: "Male", house: "Gryffindor", ancestry: "Pure-blood" },
-  { name: "Carla", gender: "Female", house: "Revenclaw", ancestry: "Muggle" },
+  { name: "Carla", gender: "Female", house: "Ravenclaw", ancestry: "Muggle" },
   {
     name: "Rodrigo",
     gender: "Male",
@@ -31,6 +31,17 @@ const charactersMale = [
     ancestry: "Pure-blood",
   },
 ];
+
+describe("test function for computeStats", () => {
+  it("counts characters for each house", () => {
+    expect(computeStats({ characters })).toEqual({
+      hufflepuff: 0,
+      gryffindor: 2,
+      ravenclaw: 2,
+      slytherin: 0,
+    });
+  });
+});
 
 describe("test function gender", () => {
   it("Filter male", () => {
