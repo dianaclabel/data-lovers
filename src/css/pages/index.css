@@ -69,7 +69,7 @@ html {
     rgba(10, 10, 83, 1) 45%,
     rgba(9, 7, 42, 1) 73%
   );
-  height: 100vh;
+  height: 90vh;
 }
 
 .casas > div {
@@ -79,7 +79,7 @@ html {
 }
 
 .contenedor-casas {
-  width: 50vw;
+  width: 46vw;
   height: 70vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -101,7 +101,7 @@ html {
 }
 
 .casa {
-  height: 230px;
+  height: 260px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -146,7 +146,4 @@ div .casa__info-total {
 }
 
 @media (min-width: 1440px) {
-  .casa {
-    height: 340px;
-  }
 }
