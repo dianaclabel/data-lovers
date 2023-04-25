@@ -20,13 +20,13 @@ html {
 
 .titulo-principal-home {
   position: absolute;
-  width: 50%;
-  top: 43px;
-  left: 24%;
+  width: 40%;
+  top: 58px;
+  left: 30%;
 }
 
 .nav-principal {
-  height: 55px;
+  height: 47px;
   width: 100%;
 }
 
@@ -69,7 +69,8 @@ html {
     rgba(10, 10, 83, 1) 45%,
     rgba(9, 7, 42, 1) 73%
   );
-  height: 90vh;
+  height: 85vh;
+  margin-top: 38px;
 }
 
 .casas > div {
@@ -80,10 +81,10 @@ html {
 
 .contenedor-casas {
   width: 46vw;
-  height: 70vh;
+  height: 60vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-top: 80px;
+  padding-top: 130px;
   margin: auto;
 }
 
@@ -101,7 +102,7 @@ html {
 }
 
 .casa {
-  height: 260px;
+  height: 280px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
