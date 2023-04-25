@@ -1,4 +1,66 @@
-/* Estilos para H.U 1 */
+/* nav-principal */
+html {
+  scroll-behavior: smooth;
+}
+
+.navegacion-princiapl {
+  width: 100%;
+  height: 370px;
+}
+
+.contenedor-imagen-principal {
+  position: relative;
+}
+.img-navegacion-principal {
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  display: block;
+}
+
+.titulo-principal-home {
+  position: absolute;
+  width: 40%;
+  top: 58px;
+  left: 30%;
+}
+
+.nav-principal {
+  height: 47px;
+  width: 100%;
+}
+
+.nav-principal__items {
+  background-color: rgba(9, 7, 42, 1);
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-principal__item {
+  border-radius: 15px;
+  list-style: none;
+  font-family: var(--fuente-secondary);
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: var(--color-primary);
+  width: 200px;
+  height: 45px;
+  transition: width 2s;
+}
+
+.nav-principal__item a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-principal__item:hover {
+  width: 300px;
+  background-color: rgb(248, 209, 118);
+}
+
+/* Estilos para H.U 1- Home-principal-house*/
 .casas {
   background: rgb(42, 37, 125);
   background: radial-gradient(
@@ -7,7 +69,8 @@
     rgba(10, 10, 83, 1) 45%,
     rgba(9, 7, 42, 1) 73%
   );
-  height: 100vh;
+  height: 85vh;
+  margin-top: 38px;
 }
 
 .casas > div {
@@ -17,11 +80,11 @@
 }
 
 .contenedor-casas {
-  width: 50vw;
-  height: 70vh;
+  width: 46vw;
+  height: 60vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-top: 80px;
+  padding-top: 130px;
   margin: auto;
 }
 
@@ -39,7 +102,7 @@
 }
 
 .casa {
-  height: 230px;
+  height: 280px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -197,7 +260,32 @@ div .casa__info-total {
 }
 
 @media (min-width: 1440px) {
-  .casa {
-    height: 340px;
-  }
+}
+/* footer */
+.footer-H {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 2%;
+  background: #0b092f;
+  color: whitesmoke;
+}
+.imagen-H-P {
+  width: 25%;
+}
+.lista,
+.lista1,
+.lista2 {
+  list-style: none;
+  width: 33%;
+  font-family: "Roboto";
+  font-style: normal;
+}
+.lista1 h3,
+.lista2 h3 {
+  color: rgba(199, 139, 28, 1);
+}
+.redes {
+  width: 25%;
 }

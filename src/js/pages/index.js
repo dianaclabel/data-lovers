@@ -2,8 +2,8 @@ import { computeStats } from "../data.js";
 import data from "../../data/harrypotter/data.js";
 import { filterBooks } from "../data.js";
 
-const numeroTotalP = document.querySelectorAll("#numero-total");
 const carruselDiv = document.getElementById("carrusel");
+const numeroTotalP = document.querySelectorAll(".numero-total");
 
 //total de estudiantes por casa
 function totalEStudiantesCasa(data) {
@@ -64,7 +64,6 @@ function cardBook(datalibro, imglibro) {
   cardLibroDiv.appendChild(imgLibro);
   cardLibroDiv.appendChild(cardLibroInfo);
 
-  console.log(cardLibroDiv);
   carruselDiv.appendChild(cardLibroDiv);
 }
 librosEncontrados(data);

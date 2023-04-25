@@ -6,16 +6,27 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/pages/index.css">
     <link rel="stylesheet" href="./css/pages/spell-potions.css" />
-    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/jim-nightshade" rel="stylesheet">
   </head>
   <body>
-    <nav class="navegacion">
+    <nav class="navegacion-princiapl">
+        <div class="contenedor-imagen-principal">
+            <img class="img-navegacion-principal" src="./assets/castillo.jpg" alt="castillo-harry-potter" />
+            <img class="titulo-principal-home" src="./assets/titulo-h.p.png" alt="titulo" />
+        </div>
+        <div class="nav-principal">
+          <ul class="nav-principal__items">
+            <li class="nav-principal__item"><a href="#seccion-casas"> Houses </a></li>
+            <li class="nav-principal__item"><a href="#seccion-libros">Books</a></li>
+            <li class="nav-principal__item"><a href="#seccion-hechizos-pociones">Spells</a></li>
+            <li class="nav-principal__item"><a href="#seccion-hechizos-pociones">Potions</a></li>
+          </ul>
+        </div>
     </nav>
-    <section class="casas">
+    <section class="casas" id="seccion-casas">
       <div>
        <div class="contenedor-casas">
         <div class="casa casa-hufflepuff">
@@ -23,7 +34,7 @@
             <div class="casa__info">
               <h3 class="casa__info-titulo">Hufflepuff</h3>
               <p > Total de personajes:</p>
-              <p class="casa__info-total" id="numero-total"> 304 </p>
+              <p class="casa__info-total numero-total" > 304 </p>
             </div>
           </a> 
         </div>
@@ -32,7 +43,7 @@
             <div class="casa__info">
               <h3 class="casa__info-titulo">Gryffindor</h3>
               <p> Total de personajes:</p>
-              <p class="casa__info-total" id="numero-total"> 304 </p>
+              <p class="casa__info-total numero-total" > 304 </p>
             </div>
           </a> 
         </div>
@@ -41,16 +52,16 @@
             <div class="casa__info">
               <h3 class="casa__info-titulo">Ravenclaw</h3>
               <p> Total de personajes:</p>
-              <p class="casa__info-total" id="numero-total"> 304 </p>
+              <p class="casa__info-total numero-total" > 304 </p>
             </div>
           </a>
         </div>
         <div class="casa casa-slytherin">
-          <a class="casa__link" href="./slytherin.html"">
+          <a class="casa__link" href="./slytherin.html" >
             <div class="casa__info">
               <h3 class="casa__info-titulo">Slytherin</h3>
               <p> Total de personajes:</p>
-              <p class="casa__info-total" id="numero-total"> 304 </p>
+              <p class="casa__info-total numero-total" > 304 </p>
             </div>
           </a>
         </div>
@@ -67,7 +78,7 @@
             <div class="medio">
               <img class="img--varita" src="assets/varita.png" alt="imagen2-varita">
             </div>
-            <a href="/" id="div-pocion" class="contenedor-pociones">
+            <a href="potions.html" id="div-pocion" class="contenedor-pociones">
               <h2 class="titulo-potions">Potions</h2>
            </a>
         </div>
@@ -85,7 +96,27 @@
         </div>
       </div>
     </section>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer-H">
+      <ul class="lista">
+        <li><img class="imagen-H-P" src="assets/logo-h-p.png" alt="imagen-logo"></li>
+        <li><h4>Follow us</h4></li>
+        <li><img class="redes" src="assets/redes-sociales.png" alt="redes"></li>
+      </ul>
+      <ul class="lista1">
+        <li><h3>Overview</h3></li>
+        <li><h4>About</h4> </li>
+        <li><h4>Contact</h4></li>
+        <li><h4>Privacy Plici</h4></li>
+      </ul>
+      <ul class="lista2">
+        <li><h3>Policity</h3></li>
+        <li><h4>Comunity Central</h4></li>
+        <li><h4>Support</h4></li>
+        <li><h4>Help</h4></li>
+      </ul>
+    </div>
+    </footer>
     <script src="./js/pages/index.js" type="module"></script>
   </body>
 </html>
