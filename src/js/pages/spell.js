@@ -2,13 +2,13 @@ import { filterSpells } from "../data.js";
 const inputBuscador = document.querySelector("#input-buscador");
 
 if (inputBuscador !== null) {
-  inputBuscador.addEventListener("keydown", (e) => {
+  inputBuscador.addEventListener("keydown", () => {
     const contenedorResultado = document.querySelector("#resultado-busqueda");
     const spellEncontrados = filterSpells(inputBuscador.value);
 
     contenedorResultado.innerHTML = "";
     spellEncontrados.forEach((spell) => {
-        contenedorResultado.appendChild(mostrarSpell(spell));
+      contenedorResultado.appendChild(mostrarSpell(spell));
     });
   });
 }
@@ -37,12 +37,10 @@ const mostrarSpell = (spell) => {
   contenedorCardInfoHechizoTipoDiv.classList.add("spell-item__info");
   contenedorCardInfoHechizoTipoDiv.innerHTML = `<b>Tipo de Hechizo: </b>${spell.spell_type}`;
 
-
   contenedorSpell.appendChild(contenedorImgVarita);
   contenedorSpell.appendChild(contenedorCardInfoNombreDiv);
   contenedorSpell.appendChild(contenedorCardInfoPronunciacionDiv);
   contenedorSpell.appendChild(contenedorCardInfoHechizoTipoDiv);
 
-  
   return contenedorSpell;
-}
+};

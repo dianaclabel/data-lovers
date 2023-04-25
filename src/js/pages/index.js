@@ -1,7 +1,7 @@
 import { computeStats } from "../data.js";
 import data from "../../data/harrypotter/data.js";
 
-const numeroTotalP = document.querySelectorAll("#numero-total");
+const numeroTotalP = document.querySelectorAll(".numero-total");
 
 //total de estudiantes por casa
 function totalEStudiantesCasa(data) {
