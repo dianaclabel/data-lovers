@@ -32,7 +32,6 @@ export const filterData = function (data, houseSelection) {
   const personajesHouseSelection = data.characters.filter(
     (character) => character.house === houseSelection
   );
-  console.log(personajesHouseSelection);
   return personajesHouseSelection;
 };
 
