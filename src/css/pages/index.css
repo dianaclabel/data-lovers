@@ -88,3 +88,28 @@ div .casa__info-total {
     height: 340px;
   }
 }
+.footer-H {
+  display: flex;
+  justify-content: space-around;
+  padding: 2%;
+  background:  #0B092F;
+  color: whitesmoke;
+  
+}
+.imagen-H-P {
+
+  width: 15%;
+}
+.lista {
+  list-style: none;
+  width: 33%;
+}
+.lista1 {
+  list-style: none;
+  width: 33%;
+}
+
+.lista2 {
+  list-style: none;
+  width: 33%;
+}

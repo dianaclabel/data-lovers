@@ -70,33 +70,43 @@ body{
   
   }
   /* Cards con el resultado de la busqueda */
-.resultado-busqueda1 {
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-gap: 30px;
-    justify-content: center;
-    margin-top: 6%;
+.resultado-busqueda {
+    width: 100%;
   }
   
+  .potions-item__title{
+    display: flex;
+    width: 50%;
+    margin: 20px auto 20px auto;;
+  }
+
+  .potions-item__title h3{
+    margin: 20px auto 5px auto;
+    color: #ffffff;
+  }
+
   .potions-item {
-    width: 85%;
-    background-color: #C78B1C;
-    border: #FFFBFB solid 20px;
-    margin: 2%
+    width: 60%;
+    background-color: #7F0909;
+    margin: 20px auto 20px auto;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+    color: #FFFFFF;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 22px;
+    border-left: #FFFFFF thick 10px;
   }
-  
-  .potions-item__img {
-    position: relative;
-    width: 90%;
-    top: 20%;
-    transform: rotate(-30deg);
+   
+  .potions-item__img{
+    width: 50px;
+  }
+
+  .contenedor-img-potions{
+    width: auto;
   }
   
   .potions-item__info {
-    position: relative;
-    top: -50px;
-    font-size: 24px;
-    margin: 10%;
-  
+    width: 40%;
   }
