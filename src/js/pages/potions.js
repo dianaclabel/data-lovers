@@ -2,7 +2,7 @@ import { filterPotions } from "../data.js";
 const inputBuscador1 = document.querySelector("#input-buscador1");
 
 if (inputBuscador1 !== null) {
-  inputBuscador1.addEventListener("keydown", (e) => {
+  inputBuscador1.addEventListener("keydown", () => {
     const contenedorResultado1 = document.querySelector("#resultado-busqueda1");
     const potionsEncontrados = filterPotions(inputBuscador1.value);
 

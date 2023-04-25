@@ -145,28 +145,145 @@ div .casa__info-total {
   background-color: black;
   opacity: 0.8;
 }
+/* estilos de H.U 4 -libros */
+.libros {
+  width: 100%;
+  background: rgb(42, 37, 125);
+  background: radial-gradient(
+    circle,
+    rgba(42, 37, 125, 1) 11%,
+    rgba(10, 10, 83, 1) 45%,
+    rgba(9, 7, 42, 1) 73%
+  );
+}
+
+.contenedor-libros {
+  position: relative;
+  background-image: url(/assets/brillo-5.png);
+  background-size: cover;
+  width: 100%;
+  padding-top: 50px;
+}
+.titulo-libros {
+  font-size: 3rem;
+  line-height: 18px;
+  font-family: var(--fuente-secondary);
+  color: var(--color-primary);
+  text-align: center;
+  padding-bottom: 24px;
+}
+.contenedor-carrusel {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 10px 0;
+  margin: 0 auto;
+  max-width: 90vw;
+}
+
+.carrusel {
+  /* position: relative;
+  top: 0;
+  left: 0; */
+  display: flex;
+  justify-content: center;
+  height: 580px;
+  overflow-x: scroll;
+  scroll-snap-align: center;
+  flex-wrap: nowrap;
+}
+
+.card-libro {
+  margin: 30px;
+  width: 300px;
+  border-radius: 30px;
+  height: 400px;
+  transition: opacity 0.3s, transform 0.3s;
+  flex: 1 0 auto;
+}
+
+.contenedor-carrusel .card-libro:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.img-libro {
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  display: block;
+  height: 350px;
+  object-fit: cover;
+}
+
+.card-libro__info {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  border-radius: 0 0 30px 30px;
+}
+
+.card-libro__info > p {
+  color: white;
+  font-family: var(--fuente-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.btn-carrusel__left,
+.btn-carrusel__right {
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.btn-carrusel__left {
+  left: 96px;
+}
+
+.btn-carrusel__left img {
+  width: 25px;
+}
+
+.btn-carrusel__right img {
+  width: 25px;
+}
+
+.btn-carrusel__right {
+  right: 61px;
+}
 
 @media (min-width: 1440px) {
 }
+/* footer */
 .footer-H {
   display: flex;
   justify-content: space-around;
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 2%;
-  background:  #0B092F;
+  background: #0b092f;
   color: whitesmoke;
 }
 .imagen-H-P {
   width: 25%;
 }
-.lista ,.lista1, .lista2 {
+.lista,
+.lista1,
+.lista2 {
   list-style: none;
   width: 33%;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
 }
-.lista1 h3, .lista2 h3 {
+.lista1 h3,
+.lista2 h3 {
   color: rgba(199, 139, 28, 1);
 }
 .redes {
