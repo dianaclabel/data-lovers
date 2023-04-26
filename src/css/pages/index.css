@@ -145,6 +145,161 @@ div .casa__info-total {
   background-color: black;
   opacity: 0.8;
 }
+/* estilos de H.U 4 -libros */
+.libros {
+  width: 100%;
+  background: rgb(42, 37, 125);
+  background: radial-gradient(
+    circle,
+    rgba(42, 37, 125, 1) 11%,
+    rgba(10, 10, 83, 1) 45%,
+    rgba(9, 7, 42, 1) 73%
+  );
+}
+
+.contenedor-libros {
+  position: relative;
+  background-image: url(/assets/brillo-5.png);
+  background-size: cover;
+  width: 100%;
+  padding-top: 50px;
+}
+.titulo-libros {
+  font-size: 4.5rem;
+  line-height: 18px;
+  /* font-family: var(--fuente-secondary); */
+  font-family: "Jim Nightshade", sans-serif;
+  color: #c78b1c;
+  text-align: center;
+  font-weight: 400;
+  padding-bottom: 36px;
+  padding-top: 36px;
+}
+.contenedor-carrusel {
+  position: relative;
+  padding: 0 40px;
+}
+
+.carrusel {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  padding: 16px 0;
+}
+
+.carrusel::-webkit-scrollbar {
+  background-color: transparent;
+  height: 8px;
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 12px;
+}
+
+.card-libro {
+  display: inline-block;
+  margin: 30px;
+  width: 300px;
+  border-radius: 30px;
+  white-space: normal;
+  transition: opacity 0.3s, transform 0.3s;
+  scroll-snap-align: center;
+}
+
+.contenedor-carrusel .card-libro:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.img-libro {
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  display: block;
+  height: 350px;
+  object-fit: cover;
+}
+
+.card-libro__info {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  border-radius: 0 0 30px 30px;
+}
+
+.card-libro__info > p {
+  color: rgb(20, 20, 57);
+  font-family: var(--fuente-secondary);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.card-libro__info > p b {
+  font-family: var(--fuente-secondary);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(20, 20, 57);
+}
+
+.btn-carrusel__left,
+.btn-carrusel__right {
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  top: 34%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.btn-carrusel__left {
+  left: 56px;
+}
+
+.btn-carrusel__left img {
+  width: 25px;
+}
+
+.btn-carrusel__right img {
+  width: 25px;
+}
+
+.btn-carrusel__right {
+  right: 61px;
+}
 
 @media (min-width: 1440px) {
+}
+/* footer */
+.footer-H {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 2%;
+  background: #0b092f;
+  color: whitesmoke;
+}
+.imagen-H-P {
+  width: 25%;
+}
+.lista,
+.lista1,
+.lista2 {
+  list-style: none;
+  width: 33%;
+  font-family: "Roboto";
+  font-style: normal;
+}
+.lista1 h3,
+.lista2 h3 {
+  color: rgba(199, 139, 28, 1);
+}
+.redes {
+  width: 25%;
 }

@@ -58,7 +58,10 @@ export const orderName = function (data) {
     return a.name.localeCompare(b.name);
   });
 };
-
+//books
+export const filterBooks = function (data) {
+  return data.books.filter((element) => element);
+};
 //hechizos
 export const filterSpells = (spellName) => {
   return data.spells.filter((spell) => spell.name.includes(spellName));
