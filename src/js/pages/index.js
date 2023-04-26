@@ -4,6 +4,8 @@ import { filterBooks } from "../data.js";
 
 const carruselDiv = document.getElementById("carrusel");
 const numeroTotalP = document.querySelectorAll(".numero-total");
+const carruselLeftBtn = document.getElementById("btn-carrusel__left");
+const carruselRightBtn = document.getElementById("btn-carrusel__right");
 
 //total de estudiantes por casa
 function totalEStudiantesCasa(data) {
@@ -51,12 +53,12 @@ function cardBook(datalibro, imglibro) {
   cardLibroInfo.classList.add("card-libro__info");
 
   const titleBookP = document.createElement("p");
-  titleBookP.innerText = "Title: " + libroCard.title;
+  titleBookP.innerHTML = `<b>Title:</b> ${libroCard.title}`;
 
   const releaseDayP = document.createElement("p");
-  releaseDayP.innerText = "Release Day: " + libroCard.releaseDay;
+  releaseDayP.innerHTML = `<b>Release Day:</b> ${libroCard.releaseDay}`;
   const authorP = document.createElement("p");
-  authorP.innerText = "Author: " + libroCard.author;
+  authorP.innerHTML = `<b>Author:</b> ${libroCard.author}`;
 
   cardLibroInfo.appendChild(titleBookP);
   cardLibroInfo.appendChild(releaseDayP);
@@ -66,4 +68,13 @@ function cardBook(datalibro, imglibro) {
 
   carruselDiv.appendChild(cardLibroDiv);
 }
+
+carruselLeftBtn.addEventListener("click", () => {
+  carruselDiv.scrollBy({ left: -200, behavior: "smooth" });
+});
+
+carruselRightBtn.addEventListener("click", () => {
+  carruselDiv.scrollBy({ left: 200, behavior: "smooth" });
+});
+
 librosEncontrados(data);
