@@ -165,12 +165,15 @@ div .casa__info-total {
   padding-top: 50px;
 }
 .titulo-libros {
-  font-size: 3rem;
+  font-size: 4.5rem;
   line-height: 18px;
-  font-family: var(--fuente-secondary);
-  color: var(--color-primary);
+  /* font-family: var(--fuente-secondary); */
+  font-family: "Jim Nightshade", sans-serif;
+  color: #c78b1c;
   text-align: center;
-  padding-bottom: 24px;
+  font-weight: 400;
+  padding-bottom: 36px;
+  padding-top: 36px;
 }
 .contenedor-carrusel {
   position: relative;
