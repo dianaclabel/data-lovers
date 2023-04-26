@@ -173,33 +173,36 @@ div .casa__info-total {
   padding-bottom: 24px;
 }
 .contenedor-carrusel {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  padding: 10px 0;
-  margin: 0 auto;
-  max-width: 90vw;
+  position: relative;
+  padding: 0 40px;
 }
 
 .carrusel {
-  /* position: relative;
-  top: 0;
-  left: 0; */
-  display: flex;
-  justify-content: center;
-  height: 580px;
-  overflow-x: scroll;
-  scroll-snap-align: center;
-  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  padding: 16px 0;
+}
+
+.carrusel::-webkit-scrollbar {
+  background-color: transparent;
+  height: 8px;
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 12px;
 }
 
 .card-libro {
+  display: inline-block;
   margin: 30px;
   width: 300px;
   border-radius: 30px;
-  height: 400px;
+  white-space: normal;
   transition: opacity 0.3s, transform 0.3s;
-  flex: 1 0 auto;
+  scroll-snap-align: center;
 }
 
 .contenedor-carrusel .card-libro:hover {
@@ -223,11 +226,18 @@ div .casa__info-total {
 }
 
 .card-libro__info > p {
-  color: white;
-  font-family: var(--fuente-primary);
-  font-size: 1.2rem;
-  font-weight: 700;
+  color: rgb(20, 20, 57);
+  font-family: var(--fuente-secondary);
+  font-size: 1rem;
   margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.card-libro__info > p b {
+  font-family: var(--fuente-secondary);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(20, 20, 57);
 }
 
 .btn-carrusel__left,
@@ -239,12 +249,13 @@ div .casa__info-total {
   width: 48px;
   height: 48px;
   border: 0;
+  top: 34%;
   position: absolute;
   cursor: pointer;
 }
 
 .btn-carrusel__left {
-  left: 96px;
+  left: 56px;
 }
 
 .btn-carrusel__left img {
