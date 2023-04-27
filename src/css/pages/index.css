@@ -74,7 +74,7 @@ html {
 }
 
 .casas > div {
-  background-image: url(/assets/brillo-5.png);
+  background-image: url(../../assets/brillo-5.png);
   background-size: cover;
   height: 100%;
 }
@@ -89,16 +89,16 @@ html {
 }
 
 .casa-hufflepuff {
-  background-image: url(/assets/huffepuff.jpg);
+  background-image: url(../../assets/huffepuff.jpg);
 }
 .casa-gryffindor {
-  background-image: url(/assets/gryffindor.jpg);
+  background-image: url(../../assets/gryffindor.jpg);
 }
 .casa-ravenclaw {
-  background-image: url(/assets/ravenclaw.jpg);
+  background-image: url(../../assets/ravenclaw.jpg);
 }
 .casa-slytherin {
-  background-image: url(/assets/slytherin.jpg);
+  background-image: url(../../assets/slytherin.jpg);
 }
 
 .casa {
@@ -159,7 +159,7 @@ div .casa__info-total {
 
 .contenedor-libros {
   position: relative;
-  background-image: url(/assets/brillo-5.png);
+  background-image: url(../../assets/brillo-5.png);
   background-size: cover;
   width: 100%;
   padding-top: 50px;
