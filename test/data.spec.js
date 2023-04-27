@@ -1,4 +1,4 @@
-import { computeStats, filterData, filterGender } from "../src/js/data.js";
+import { computeStats, filterData, filterGender, filterSpells, filterPotions  } from "../src/js/data.js";
 
 const characters = [
   { name: "Juan", gender: "Male", house: "Gryffindor", ancestry: "Pure-blood" },
@@ -57,7 +57,48 @@ describe("test function for character of each house", () => {
   });
 });
 
-//   it("returns `anotherExample`", () => {
-//     expect(anotherExample()).toBe("OMG");
-//   });
-// });
+describe('filterSpells', () => {
+  test('debería devolver una lista filtrada de hechizos que contengan el nombre de hechizo proporcionado', () => {
+    const spellName = 'Accio';
+    const filteredSpells = filterSpells(spellName);
+    expect(Array.isArray(filteredSpells)).toBe(true);
+    expect(filteredSpells[0].name).toEqual(spellName);
+  });
+
+  test('debería devolver una lista vacía si no se encuentran hechizos que contengan el nombre de hechizo proporcionado', () => {
+    const spellName = 'Hechizo que no existe';
+    const filteredSpells = filterSpells(spellName);
+    expect(filteredSpells).toEqual([]);
+  });
+
+  test('debería devolver una la cantidad de hechizos que coincidan con la palabra ingresada', () => {
+    const spellName = 'Anti';
+    const filteredSpells = filterSpells(spellName);
+    expect(filteredSpells.length).toEqual(3);
+  });
+});
+
+describe('filterPotions', () => {
+  test('debería devolver una lista filtrada de pociones que contengan el nombre de la pocion proporcionada', () => {
+    const potionName = 'Bulgeye';
+    const filteredPotions = filterPotions(potionName);
+    expect(Array.isArray(filteredPotions)).toBe(true);
+    expect(filteredPotions).toEqual([{
+      id: 21,
+      name: "Bulgeye Potion",
+      description: "Presumed to make the taker's eyes swell.",
+    }]);
+  });
+
+  test('debería devolver una lista vacía si no se encuentran la pocion que contengan el nombre de pocion proporcionada', () => {
+    const potionName = 'Pocion que no existe';
+    const filteredPotions = filterPotions(potionName);
+    expect(filteredPotions).toEqual([]);
+  });
+
+  test('debería devolver una la cantidad de pociones que coincidan con la palabra ingresada', () => {
+    const potionName = 'Antidote';
+    const filteredPotions = filterPotions(potionName);
+    expect(filteredPotions.length).toEqual(6);
+  });
+});

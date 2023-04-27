@@ -43,8 +43,8 @@ function buscarPersonajes() {
 
     iterarCadaPersonaje(personajesEncontrados);
 
-    console.log(valorBuscador);
-    console.log(personajesEncontrados);
+    //console.log(valorBuscador);
+    //console.log(personajesEncontrados);
   });
 }
 
