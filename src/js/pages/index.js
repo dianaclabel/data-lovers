@@ -1,6 +1,5 @@
 import { computeStats } from "../data.js";
 import data from "../../data/harrypotter/data.js";
-import { filterBooks } from "../data.js";
 
 const carruselDiv = document.getElementById("carrusel");
 const numeroTotalP = document.querySelectorAll(".numero-total");
@@ -21,8 +20,7 @@ function totalEStudiantesCasa(data) {
 totalEStudiantesCasa(data);
 
 //books
-function librosEncontrados(data) {
-  const libros = filterBooks(data);
+function librosEncontrados() {
   const imgLibros = [
     "book-1",
     "book-2",
@@ -34,8 +32,8 @@ function librosEncontrados(data) {
     "book-8",
   ];
 
-  for (let i = 0; i < libros.length; i++) {
-    cardBook(libros[i], imgLibros[i]);
+  for (let i = 0; i < data.books.length; i++) {
+    cardBook(data.books[i], imgLibros[i]);
   }
 }
 
@@ -77,4 +75,4 @@ carruselRightBtn.addEventListener("click", () => {
   carruselDiv.scrollBy({ left: 200, behavior: "smooth" });
 });
 
-librosEncontrados(data);
+librosEncontrados();
