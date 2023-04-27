@@ -159,7 +159,7 @@ div .casa__info-total {
 
 .contenedor-libros {
   position: relative;
-  background-image: url(./assets/brillo-5.png);
+  background-image: url(../../assets/brillo-5.png);
   background-size: cover;
   width: 100%;
   padding-top: 50px;
