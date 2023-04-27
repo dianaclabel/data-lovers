@@ -6,16 +6,16 @@
 }
 
 .body-gryffindor {
-  background-image: url(/assets/fondo-gryffindor-4.jpg);
+  background-image: url(../../assets/fondo-gryffindor-4.jpg);
 }
 .body-slytherin {
-  background-image: url(/assets/fondo-slytherin.jpg);
+  background-image: url(../../assets/fondo-slytherin.jpg);
 }
 .body-ravenclaw {
-  background-image: url(/assets/fondo-ravenclaw.jpg);
+  background-image: url(../../assets/fondo-ravenclaw.jpg);
 }
 .body-hufflepuff {
-  background-image: url(/assets/fondo-hufflepuff.jpg);
+  background-image: url(../../assets/fondo-hufflepuff.jpg);
 }
 .contenedor-icono {
   display: none;
