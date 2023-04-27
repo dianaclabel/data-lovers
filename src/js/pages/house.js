@@ -42,9 +42,6 @@ function buscarPersonajes() {
     );
 
     iterarCadaPersonaje(personajesEncontrados);
-
-    console.log(valorBuscador);
-    console.log(personajesEncontrados);
   });
 }
 
@@ -165,7 +162,6 @@ function creacionCard(data) {
   cardPersonajeDiv.appendChild(contenedorImgDiv);
   cardPersonajeDiv.appendChild(contenedorCardInfoDiv);
 
-  console.log(cardPersonajeDiv);
   return cardPersonajeDiv;
 }
 
