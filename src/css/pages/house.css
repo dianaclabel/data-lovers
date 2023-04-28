@@ -1,0 +1,545 @@
+/* Estilos para H.U 2 */
+
+/*gryffindor*/
+.body-house {
+  background-size: contain;
+}
+
+.body-gryffindor {
+  background-image: url(../../assets/fondo-gryffindor-4.jpg);
+}
+.body-slytherin {
+  background-image: url(../../assets/fondo-slytherin.jpg);
+}
+.body-ravenclaw {
+  background-image: url(../../assets/fondo-ravenclaw.jpg);
+}
+.body-hufflepuff {
+  background-image: url(../../assets/fondo-hufflepuff.jpg);
+}
+.contenedor-icono {
+  display: none;
+}
+.nav-house {
+  height: 10vh;
+  width: 100%;
+}
+
+.nav-house__items {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 2rem;
+  list-style: none;
+}
+
+.nav-item > a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-family: var(--fuente-secondary);
+  font-size: 1.5rem;
+}
+
+.nav-item > a:hover {
+  font-size: 1.7rem;
+  color: #ffffff;
+}
+
+.nav-item___slytherin > a {
+  color: #ffffff;
+}
+
+.nav-item__ravenclaw > a {
+  color: rgb(255 153 0);
+}
+
+.nav-item__hufflepuff > a {
+  color: #ffffff;
+}
+
+.contenedor-principal-house {
+  width: 100%;
+}
+
+.intro-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo-principal {
+  font-size: 3.5rem;
+  color: var(--color-primary);
+  font-family: var(--fuente-secondary);
+  margin-bottom: 2rem;
+}
+
+.titulo-principal-slytherin {
+  color: rgb(218, 213, 213);
+}
+
+.titulo-principal-ravenclaw {
+  color: rgb(255 153 0);
+}
+
+.titulo-principal-hufflepuff {
+  color: #ffffff;
+}
+
+.subtitulo {
+  font-size: 2rem;
+  color: #ffffff;
+  font-family: var(--fuente-primary);
+  margin-bottom: 2rem;
+}
+
+.form-house {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.buscador-house {
+  width: 20%;
+  height: 35px;
+  border-radius: 12px;
+  outline: none;
+  padding: 10px;
+  border: none;
+}
+
+.buscador-house::placeholder {
+  font-size: 1.2rem;
+  padding: 2px;
+}
+.img-buscador {
+  width: 25px;
+  position: absolute;
+  right: 940px;
+}
+
+.seleccion-filtracion,
+.seleccion-order {
+  width: 150px;
+  height: 35px;
+  border-radius: 5px;
+  margin-left: 15px;
+  appearance: none;
+  outline: none;
+  font-size: 20px;
+  /* font-weight: 500; */
+  padding-left: 10px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.select-gryffindor,
+.selec-order-gryffindor {
+  color: var(--color-cards-gryffindor);
+}
+
+.select-slytherin,
+.selec-order-slytherin {
+  color: var(--color-cards-slytherin);
+}
+
+.select-ravenclaw,
+.selec-order-avenclaw {
+  color: var(--color-primary-ravenclaw);
+}
+
+.select-hufflepuff,
+.selec-order-hufflepuff {
+  color: black;
+}
+
+.categoria {
+  padding: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cat-gryffindor {
+  background-color: var(--color-cards-gryffindor);
+}
+
+.cat-slytherin {
+  background-color: #2a623d;
+}
+.cat-hufflepuff {
+  background-color: black;
+}
+
+.cat-ravenclaw {
+  background-color: var(--color-primary-ravenclaw);
+}
+.option-image {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.option-house {
+  text-align: center;
+  font-size: 20px;
+}
+.cards-personajes {
+  margin: 100px 30px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 550px);
+  row-gap: 35px;
+  column-gap: 35px;
+  justify-content: center;
+}
+.card-personaje {
+  width: 550px;
+  min-height: 300px;
+  padding: 10px;
+  border: var(--color-primary) solid 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.card-gryffindor {
+  background-color: var(--color-cards-gryffindor);
+}
+.card-slytherin {
+  background-color: var(--color-cards-slytherin);
+}
+.card-ravenclaw {
+  background-color: var(--color-cards-ravenclaw);
+  border: white solid 4px;
+}
+.card-hufflepuff {
+  background-color: #1f1f14;
+  /* border: white solid 4px; */
+}
+.card-personaje__info--titulo {
+  font-family: var(--fuente-secondary);
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin: 15px 0 25px 0;
+  text-align: center;
+}
+
+.contenedor-img {
+  margin: 12px;
+  border-radius: 15px;
+}
+.contenedor-img-gryffindor {
+  background-color: #3a0404;
+}
+
+.contenedor-img-slytherin {
+  background-color: var(--color-secondary-slytherin);
+  height: 300px;
+  padding-top: 50px;
+}
+.contenedor-img-ravenclaw {
+  background-color: #020d23;
+}
+
+.contenedor-img-hufflepuff {
+  background-color: #020202;
+}
+.card-personaje__img {
+  width: 220px;
+}
+.card-personaje__info {
+  margin: 0 auto;
+  height: 100%;
+}
+
+.card-personaje__info--birthdate,
+.card-personaje__info--specie,
+.card-personaje__info--group,
+.card-personaje__info--ancestry,
+.card-personaje__info--gender {
+  display: flex;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-family: var(--fuente-primary);
+}
+.card-personaje__info--group > .info-negrita {
+  width: 90px;
+}
+.card-personaje__info--birthdate > .info-negrita {
+  width: 90px;
+}
+.card-personaje__info--ancestry > .info-negrita {
+  width: 110px;
+}
+.info-negrita {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.presentacion-house {
+  width: 65%;
+  height: 520px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 4.5rem;
+  box-shadow: 13px 10px 296px -36px rgba(224, 156, 54, 1);
+  border-radius: 20px;
+}
+
+.presentacion-house__ravenclaw {
+  box-shadow: 13px 10px 296px -36px rgb(230 225 220);
+}
+
+.presentacion-house__hufflepuff {
+  box-shadow: 13px 10px 296px -36px rgb(230 225 220);
+}
+
+.presentacion-info {
+  width: 50%;
+  border-radius: 20px 0 0 20px;
+}
+
+.presents-info-gryffindor {
+  background-color: #190909;
+  opacity: 0.7;
+}
+
+.presents-info-slytherin {
+  background-color: var(--color-secondary-slytherin);
+  opacity: 0.8;
+}
+
+.presents-info-ravenclaw {
+  background-color: var(--color-primary-ravenclaw);
+  opacity: 0.9;
+}
+
+.presents-info-hufflepuff {
+  background-color: #190909;
+  opacity: 0.8;
+}
+.lema-house {
+  font-size: 2rem;
+  font-family: var(--fuente-secondary);
+  text-align: center;
+  color: var(--color-primary);
+  margin: 3rem 3rem 1.5rem 2rem;
+}
+
+.informacion-house {
+  font-family: var(--fuente-primary);
+  font-size: 1.2rem;
+  margin: 0 20px;
+  color: white;
+  text-align: justify;
+  line-height: 2rem;
+  padding: 25px 25px 40px;
+}
+.contenedor-img-presentacion {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.imagen-presentacion {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  margin: 0 auto;
+  transition: transform 0.2s;
+}
+
+.imagen-presentacion-gryffindor {
+  background-image: url(../../assets/img-presents-gryffindor.jpg);
+}
+
+.imagen-presentacion-slytherin {
+  background-image: url(../../assets/img-presents-slytherin.jpg);
+}
+
+.imagen-presentacion-ravenclaw {
+  background-image: url(../../assets/img-presents-ravenclaw.jpg);
+}
+
+.imagen-presentacion-hufflepuff {
+  background-image: url(../../assets/img-presents-hufflepuff.jpg);
+}
+
+.imagen-presentacion:hover {
+  transform: scale(1.1);
+  border-radius: 20px;
+}
+
+/* diseño responsivo mobile */
+@media (min-width: 375px) and (max-width: 400px) {
+  .contenedor-icono {
+    display: block;
+    position: relative;
+    z-index: 10;
+  }
+
+  .contenedor-icono .img-menu {
+    width: 55px;
+    margin-left: 20px;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .nav-house__items {
+    height: 100vh;
+    width: 60%;
+    display: none;
+    background-color: #171010;
+    position: absolute;
+    padding-top: 70px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .nav-item {
+    margin-top: 25px;
+    padding: 15px;
+    width: 100%;
+  }
+
+  .nav-item > a {
+    padding-left: 60px;
+  }
+
+  .nav-item__gryffindor:hover {
+    background-color: #3a0404;
+  }
+
+  .nav-item___slytherin:hover {
+    background-color: #2a623d;
+  }
+  .nav-item__ravenclaw:hover {
+    background-color: var(--color-primary-ravenclaw);
+  }
+
+  .nav-item__hufflepuff:hover {
+    background-color: var(--color-primary);
+  }
+
+  .titulo-principal {
+    font-size: 2.5rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .subtitulo {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .presentacion-house {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 3rem;
+    border-radius: 20px;
+    box-shadow: none;
+    border: 3px solid var(--color-primary);
+  }
+
+  .presentacion-info {
+    width: 100%;
+    opacity: 0.6;
+    border-radius: 20px 20px 0 0;
+  }
+  .lema-house {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--color-primary);
+    margin: 2rem 2rem 1.5rem 2rem;
+  }
+  .informacion-house {
+    font-size: 1rem;
+    margin: 0 18px 18px;
+    text-align: justify;
+    line-height: 1.6rem;
+    padding: 10px;
+  }
+  .contenedor-img-presentacion {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .imagen-presentacion {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .cards-personajes {
+    margin: 50px 20px;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    justify-content: center;
+  }
+
+  .card-personaje {
+    width: 340px;
+    padding: 20px;
+  }
+
+  .contenedor-img {
+    display: none;
+  }
+
+  .card-personaje__img {
+    display: none;
+  }
+
+  .card-personaje__info--titulo {
+    font-size: 1.8rem;
+  }
+
+  .card-personaje__info--group > .info-negrita {
+    width: 90px;
+  }
+  .card-personaje__info--birthdate > .info-negrita {
+    width: 90px;
+  }
+  .card-personaje__info--ancestry > .info-negrita {
+    width: 95px;
+  }
+  .info-negrita {
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+  .form-house {
+    flex-direction: column;
+  }
+
+  .buscador-house {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .img-buscador {
+    right: 42px;
+    bottom: 60px;
+  }
+
+  .contenedor-selectores {
+    width: 100%;
+    text-align: center;
+  }
+
+  .seleccion-filtracion,
+  .seleccion-order {
+    width: 120px;
+    margin-left: 0;
+    font-size: 18px;
+  }
+}
