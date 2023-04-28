@@ -130,7 +130,7 @@
   height: 35px;
   border-radius: 5px;
   margin-left: 15px;
-  -webkit-appearance: none;
+  appearance: none;
   outline: none;
   font-size: 20px;
   /* font-weight: 500; */
@@ -379,7 +379,7 @@
 }
 
 /* diseño responsivo mobile */
-@media (min-width: 375px) and (max-width: 450px) {
+@media (min-width: 375px) and (max-width: 400px) {
   .contenedor-icono {
     display: block;
     position: relative;
