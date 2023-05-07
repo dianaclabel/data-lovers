@@ -23,7 +23,7 @@ const mostrarPotions = (potions) => {
 
   const imagenPotions = document.createElement("img");
   imagenPotions.classList.add("potions-item__img");
-  imagenPotions.setAttribute("src", "./assets/frasco-potions.png");
+  imagenPotions.setAttribute("src", "../../assets/frasco-potions.png");
   contenedorImgPotions.appendChild(imagenPotions);
 
   const contenedorCardInfoNombreDiv = document.createElement("div");
