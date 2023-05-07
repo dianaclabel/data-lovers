@@ -22,7 +22,7 @@ const mostrarSpell = (spell) => {
 
   const imagenVarita = document.createElement("img");
   imagenVarita.classList.add("spell-item__img");
-  imagenVarita.setAttribute("src", "../../assets/varita.png");
+  imagenVarita.setAttribute("src", "../assets/varita.png");
   contenedorImgVarita.appendChild(imagenVarita);
 
   const contenedorCardInfoNombreDiv = document.createElement("div");
