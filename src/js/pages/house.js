@@ -104,7 +104,7 @@ function creacionCard(data) {
   imagenCasaImg.classList.add("card-personaje__img");
   imagenCasaImg.setAttribute(
     "src",
-    "../../assets/escudo-" + `${houseSelection}` + ".png"
+    "../assets/escudo-" + `${houseSelection}` + ".png"
   );
 
   const contenedorCardInfoDiv = document.createElement("div");
